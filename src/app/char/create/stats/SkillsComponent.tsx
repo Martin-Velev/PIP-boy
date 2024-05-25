@@ -2,13 +2,13 @@
 import { FC, useEffect, useState } from 'react'
 import { Char } from '../../../types/char'
 import {
-	DEFAULT_SKILLS,
-	DEFAULT_SKILL_MODS,
-	MAX_SKILL,
-	MIN_SKILL,
 	STARTING_SKILL_POINTS,
-} from '../../../constants'
-import { Skill, Skills, SkillName, calculateStatMods } from '../../../types/skills'
+	DEFAULT_SKILL_MODS,
+	MIN_SKILL,
+	MAX_SKILL,
+} from '@/app/rules/defaults'
+import { calculateStatMods } from '@/app/rules/skillMods'
+import { Skills, Skill, SkillName } from '@/app/types/skills'
 
 interface StatsComponentProps {
 	char: Char
