@@ -65,6 +65,8 @@ export const GHOUL_STAT_MODS = {
 export const DEFAULT_CHAR = {
 	name: '',
 	level: 0,
+    hp: 0,
+    frame: 'AVERAGE_JOE',
 
 	stats: DEFUALT_GHOUL_STATS,
 

@@ -45,3 +45,7 @@ export function addSkillMods(skills: Skills, mods: Skills) {
 	}
 	return newSkills
 }
+
+export const FTR = 'Fear the Reaper'
+
+

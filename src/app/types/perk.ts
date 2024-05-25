@@ -1,5 +1,5 @@
 export type Perk = {
-	title: string
+	name: string
 	rank: number
 	level: number
 	requrments: string

@@ -7,7 +7,7 @@ import {
 	MIN_SKILL,
 	MAX_SKILL,
 } from '@/app/rules/defaults'
-import { calculateStatMods } from '@/app/rules/skillMods'
+import { calculateStatMods } from '@/app/rules/skills'
 import { Skills, Skill, SkillName } from '@/app/types/skills'
 
 interface StatsComponentProps {

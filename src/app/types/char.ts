@@ -1,3 +1,4 @@
+import { Perk } from './perk'
 import { Skill } from './skills'
 import { Trait } from './trait'
 
@@ -10,8 +11,8 @@ export type Char = {
 	hp: number
 
 	race: 'human' | 'ghoul' | 'supermutant'
-	frame: string;
-	background: string
+	frame: string
+	background: string | null
 	stats: {
 		strength: StatScore
 		perception: StatScore
@@ -45,4 +46,7 @@ export type Char = {
 
 	traits: Trait[]
 	availableTraits: number
+
+	perks: Perk[]
+	availablePerks: number
 }
