@@ -13,6 +13,22 @@ export type Skill =
 	| 'survival'
 	| 'unarmed'
 
+export const SKILLS: Skill[] = [
+	'barter',
+	'energyWeapons',
+	'explosives',
+	'guns',
+	'lockpick',
+	'medicine',
+	'melee',
+	'repair',
+	'science',
+	'sneak',
+	'speech',
+	'survival',
+	'unarmed',
+]
+
 export enum SkillName {
 	barter = 'Barter',
 	energyWeapons = 'Energy Weapons',

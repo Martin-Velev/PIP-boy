@@ -1,26 +1,29 @@
+import { Char } from '../types/char'
 import { Skill } from '../types/skills'
-import { Trait } from '../types/trait'
-import { DEFUALT_GHOUL_STATS } from './races'
+import { Trait } from '../types/traits'
+import { BACKGROUNDS } from './backgrounds'
 
+export const START_STAT = 5
 export const MIN_STAT = 1
 export const MAX_STAT = 10
 
 export const MIN_SKILL = 5
 export const MAX_SKILL = 100
 
-export const STARTING_STAT_POINTS = 33
+export const STARTING_STAT_POINTS = 33 - 7 * 4 //When starting at 5
+
 export const STARTING_SKILL_POINTS = 0
 
-export const STARTING_TRAITS = 2
+export const AVAILABLE_TRAITS = 2
 
 export const DEFAULT_STATS = {
-	strength: MIN_STAT,
-	perception: MIN_STAT,
-	endurance: MIN_STAT,
-	charisma: MIN_STAT,
-	intelligence: MIN_STAT,
-	agility: MIN_STAT,
-	luck: MIN_STAT,
+	strength: START_STAT,
+	perception: START_STAT,
+	endurance: START_STAT,
+	charisma: START_STAT,
+	intelligence: START_STAT,
+	agility: START_STAT,
+	luck: START_STAT,
 }
 
 export const DEFAULT_SKILLS = {
@@ -39,7 +42,7 @@ export const DEFAULT_SKILLS = {
 	unarmed: MIN_SKILL,
 }
 
-export const DEFAULT_SKILL_MODS = {
+export const SKILL_MOD_BOILERPLATE = {
 	barter: 0,
 	energyWeapons: 0,
 	explosives: 0,
@@ -57,26 +60,27 @@ export const DEFAULT_SKILL_MODS = {
 
 export const DEFAULT_TAGS = 3
 
-export const GHOUL_STAT_MODS = {
-	perception: 2,
-	endurance: 1,
-}
-
-export const DEFAULT_CHAR = {
+export const DEFAULT_HUMAN: Char = {
 	name: '',
 	level: 0,
-    hp: 0,
-    frame: 'AVERAGE_JOE',
+	hp: 0,
+	frame: 'AVERAGE_JOE',
 
-	stats: DEFUALT_GHOUL_STATS,
+	stats: DEFAULT_STATS,
 
 	skills: DEFAULT_SKILLS,
 	taggedSkills: [] as Skill[],
 	availableTags: DEFAULT_TAGS,
 
-	availableStatPoints: STARTING_STAT_POINTS,
+	availableStatPoints: STARTING_STAT_POINTS + 4, // Humans get 4 stat points
 	availableSkillPoints: STARTING_SKILL_POINTS,
 
 	traits: [] as Trait[],
-	availableTraits: STARTING_TRAITS,
+	availableTraits: AVAILABLE_TRAITS,
+
+	race: 'human',
+	background: BACKGROUNDS[0],
+	perks: [],
+	availablePerks: 0,
+
 }

@@ -12,7 +12,7 @@ const CharPage: FC = () => {
 			<h1 className='w-full text-6xl flex justify-center'>Character Page</h1>
 
 			<div className='my-12  w-full flex flex-col justify-between align-middle place-items-center text-center text-6xl'>
-				<Link href='/char/create/stats'>Create a character</Link>
+				<Link href='/char/create'>Create a character</Link>
 
 				<LoadChar setChar={setChar} />
 			</div>

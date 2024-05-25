@@ -11,7 +11,7 @@ const PerkComponent: React.FC<PerkComponentProps> = ({ perk, isSelected, onSelec
 	return (
 		<div className='flex flex-row w-full' onClick={e => onSelect(perk)}>
 			<div className='w-1/12'>{isSelected ? '□' : ''}</div>
-			<h3>{perk.title}</h3>
+			<h3>{perk.name}</h3>
 			<p>{perk.description}</p>
 			{/* Render other perk details */}
 		</div>

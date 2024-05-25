@@ -1,4 +1,3 @@
-import { INT_TO_SKILL_GAIN } from './app/constants'
 import { Char } from './app/types/char'
 import { Perk } from './app/types/perk'
 
@@ -18,7 +17,7 @@ export function extractJson(perksCsv: string, columns: number): Perk[] {
 	const perks = extractTable(perksCsv, columns)
 	const perksJson = perks.slice(1).map((perk) => {
 		return {
-			title: perk[0],
+			name: perk[0],
 			rank: parseInt(perk[1]),
 			level: parseInt(perk[2]),
 			requrments: perk[3],

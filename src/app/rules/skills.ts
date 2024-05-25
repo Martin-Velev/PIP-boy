@@ -33,6 +33,9 @@ export function calculateStatMods(stats: Stats, taggedSkills: Skill[] = []) {
 	})
 
 	// Add skills from Background
+	
+
+
 
 	return skillMods
 }
@@ -45,7 +48,5 @@ export function addSkillMods(skills: Skills, mods: Skills) {
 	}
 	return newSkills
 }
-
-export const FTR = 'Fear the Reaper'
 
 

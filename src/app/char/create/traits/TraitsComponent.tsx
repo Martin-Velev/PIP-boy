@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import TraitComponent from './Trait'
-import { Trait } from '@/app/types/trait'
+import { Trait } from '@/app/types/traits'
 import { CharProps } from '@/app/common/props'
 
 const TraitsComponent: React.FC<CharProps> = ({ char, setChar }) => {
@@ -27,12 +27,12 @@ const TraitsComponent: React.FC<CharProps> = ({ char, setChar }) => {
 
 	function isTraitSelected(trait: Trait) {
 		if (!char.traits) return false
-		const charTraits = char.traits.map((trait) => trait.title)
-		return charTraits.includes(trait.title)
+		const charTraits = char.traits.map((trait) => trait.name)
+		return charTraits.includes(trait.name)
 	}
 
 	function toggleTraitSelection(trait: Trait) {
-		const index = char.traits.findIndex((t) => t.title === trait.title)
+		const index = char.traits.findIndex((t) => t.name === trait.name)
 		const isSelected = index > -1
 
 		const newTraits = [...char.traits]
@@ -63,11 +63,11 @@ const TraitsComponent: React.FC<CharProps> = ({ char, setChar }) => {
 
 			<ul>
 				{traits.map((trait: Trait) => (
-					<li key={trait.title} className='flex flex-row my-8'>
+					<li key={trait.name} className='flex flex-row my-8'>
 						<input
 							style={{ all: 'revert' }}
 							type='checkbox'
-							id={trait.title}
+							id={trait.name}
 							checked={isTraitSelected(trait)}
 							onChange={() => toggleTraitSelection(trait)}
 						/>

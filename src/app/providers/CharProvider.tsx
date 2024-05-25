@@ -7,7 +7,7 @@ import {
     SetStateAction,
 } from 'react'
 import { Char } from '../types/char'
-import { DEFAULT_CHAR } from '../constants'
+import { DEFAULT_HUMAN } from '../rules/defaults'
 
 // Define the char context type
 interface CharacterContextType {
@@ -17,13 +17,13 @@ interface CharacterContextType {
 
 // Create the char context
 export const CharContext = createContext<CharacterContextType>({
-    char: { ...DEFAULT_CHAR, name: 'test' },
+    char: { ...DEFAULT_HUMAN, name: 'test' },
     setChar: () => { },
 })
 
 // Create the char provider component
 export const CharProvider: FC<PropsWithChildren> = ({ children }) => {
-    const [char, setChar] = useState(DEFAULT_CHAR)
+    const [char, setChar] = useState(DEFAULT_HUMAN)
 
     return (
         <CharContext.Provider value={{ char, setChar }}>

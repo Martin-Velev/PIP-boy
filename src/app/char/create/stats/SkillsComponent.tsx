@@ -3,7 +3,7 @@ import { FC, useEffect, useState } from 'react'
 import { Char } from '../../../types/char'
 import {
 	STARTING_SKILL_POINTS,
-	DEFAULT_SKILL_MODS,
+	SKILL_MOD_BOILERPLATE,
 	MIN_SKILL,
 	MAX_SKILL,
 } from '@/app/rules/defaults'
@@ -17,7 +17,7 @@ interface StatsComponentProps {
 
 const SkillsComponent: FC<StatsComponentProps> = ({ char, setChar }) => {
 	const [availablePoints, setAvailablePoints] = useState(STARTING_SKILL_POINTS)
-	const [skillMods, setSkillMods] = useState<Skills>(DEFAULT_SKILL_MODS)
+	const [skillMods, setSkillMods] = useState<Skills>(SKILL_MOD_BOILERPLATE)
 	const skills: Skill[] = Object.keys(char.skills) as Skill[]
 
 	function tagSkill(skill: Skill) {

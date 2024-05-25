@@ -1,13 +1,7 @@
 'use client'
-import { DEFAULT_CHAR } from '@/app/constants'
-import { Char } from '@/app/types/char'
-import { Stats } from 'fs'
-import { Dispatch, FC } from 'react'
-import StatsComponent from './stats/StatsComponent'
+import { FC } from 'react'
 import CharComponent from '../CharComponent'
 import { CharProps } from '@/app/common/props'
-import SaveChar from '@/app/common/SaveChar'
-import LoadChar from '@/app/common/LoadChar'
 
 const CharCreate: FC<CharProps> = ({ char, setChar }) => {
 	function handleNameChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -23,8 +17,6 @@ const CharCreate: FC<CharProps> = ({ char, setChar }) => {
 			<input type='text' id='name' value={char.name} onChange={handleNameChange} />
 
 			<CharComponent char={char} setChar={setChar} />
-
-
 		</div>
 	)
 }

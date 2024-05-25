@@ -67,7 +67,7 @@ const PerksComponent: FC<CharProps> = ({ char, setChar }) => {
 									onChange={() => togglePerk(perk)}
 								/>
 								<div className='w-full flex flex-row'>
-									<div>{perk.title}</div>
+									<div>{perk.name}</div>
 									<div className='mx-2'>|</div>
 									<div>Level: {perk.level}</div>
 									<div className='mx-2'>|</div>

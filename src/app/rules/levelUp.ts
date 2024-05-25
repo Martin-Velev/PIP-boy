@@ -1,6 +1,7 @@
 import { Char } from '../types/char'
+import { FTR } from '../types/traits'
+import { MAX_STAT, MIN_STAT } from './defaults'
 import { FRAME_HEALTH_GAIN } from './frames'
-import { FTR } from './skills'
 
 export const INT_TO_SKILL_GAIN = {
 	1: 11,
@@ -21,27 +22,27 @@ export function levelUp(char: Char, hpGain: number): Char {
 	// LEVEL UP
 	newChar.level += 1
 	// ADD AVAILABLE SKILLS
-	const int = newChar.stats.intelligence
+	const int = newChar.stats.intelligence as keyof typeof INT_TO_SKILL_GAIN
 	newChar.availableSkillPoints += INT_TO_SKILL_GAIN[int]
 
 	// ADD HP
+	// Get the frame of the character
 	const frame = newChar.frame as keyof typeof FRAME_HEALTH_GAIN
 	const hitDie = FRAME_HEALTH_GAIN[frame]
-	let newHp
-	if (hpGain && hpGain > 0) {
-		newHp = char.hp + hpGain
-	} else {
-		// If no health provided roll for it
-		newHp = char.hp = Math.floor(Math.random() * hitDie) + 1
+	if (!hpGain) {
+		const roll = Math.floor(Math.random() * hitDie) + 1
+		hpGain = roll
 	}
 	const perks = char.perks.map((perk) => perk.name)
 	const hasFTR = perks.includes(FTR)
+
+	const end = newChar.stats.endurance
+	const endMod = getStatMod(end)
+	hpGain += endMod
 	if (hasFTR) {
-		// Fear the Reaper halves your health half rounded down
-		newHp = Math.floor(newHp / 2)
+		hpGain = Math.floor(hpGain / 2)
 	}
-	// TODO: this could change
-	newChar.hp = Math.max(2, newHp)
+	newChar.hp += hpGain
 
 	// ADD AVAILABLE PERKS EVERY EVEN LEVEL
 	// Fear the reaper grants you a perk every level instead of on even levels

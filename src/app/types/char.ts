@@ -1,26 +1,26 @@
+import { Background } from '../rules/backgrounds'
+import { Frame } from '../rules/frames'
+import { Race } from '../rules/races'
 import { Perk } from './perk'
 import { Skill } from './skills'
-import { Trait } from './trait'
-
-export type StatScore = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
-export type Frame = 'BIG_BRAIN' | 'LIGHT_FRAME' | 'AVERAGE_JOE' | 'BIG_HOSS' | 'HULK'
+import { Trait } from './traits'
 
 export type Char = {
 	name: string
 	level: number
 	hp: number
 
-	race: 'human' | 'ghoul' | 'supermutant'
-	frame: string
-	background: string | null
+	race: Race
+	frame: Frame
+	background: Background
 	stats: {
-		strength: StatScore
-		perception: StatScore
-		endurance: StatScore
-		charisma: StatScore
-		intelligence: StatScore
-		agility: StatScore
-		luck: StatScore
+		strength: number
+		perception: number
+		endurance: number
+		charisma: number
+		intelligence: number
+		agility: number
+		luck: number
 	}
 
 	skills: {
