@@ -1,0 +1,80 @@
+Built to Destroy
+Lower the number needed for a crit by 1. stacks
+Condition decays 2x faster
+
+Claustrophobia
++ 1 buff to SPECIAL attributes while outdoors
+- 1 debuff to SPECIAL attributes while indoors
+
+Early Bird
++ 2 buff to SPECIAL attributes from 6am to 12pm
+- 1 debuff to SPECIAL attributes from 6pm to 6am
+
+Fast Shot
+Can make a free, additional attack without adding modifiers 
+The attacks is made at disadvantage
+
+Four Eyes
++ 1 Perception while glasses equipped
+- 1 Perception when glasses aren't equipped
+
+Good Natured
+Increases Speech, Medicine, Repair,Science and Barter skills +5.
+Decreases Energy Weapons,Explosives, Guns, Melee Weapons and Unarmed skills -5.
+
+Heavy Handed
+Melee and unarmed do 2x modifier dmg
+Melee and unarmed do 60% less critical hit damage
+
+Hoarder
++ 25 lbs to total carry weight
+- 1 debuff to SPECIAL attributes while current equipment weight is below 160 lbs
+
+Hot Blooded
++5  damage increase while below 50% health
+- 2 debuff to Perception and Agility while below 50% health
+
+Kamikaze
++1 attacks as a free action
+-5 AC
+
+Logan's Loophole
+Chems last twice as long, and benefit is doubled,addiction rates are set to zero. Locks your  level cap at 30
+
+Loose Cannon
+Can throw an additional object for the same attack action
+Thrown weapons have 50% less range
+
+Skilled
+Gain +5 points to every skill.
+You cannot raise 2 skills of your choice above the starting value.
+
+Small Frame
++1 Agility
+Fragile limbs (25% extra limb damage)
+
+Trigger Discipline
+Guns and energy weapons have +3 to hit 
+Your shots deal less damage -5 dmg
+
+Wild Wasteland
+Adds additional 'wacky' content and modifies existing content and special encounters
+Removes access to some 'sane' content
+
+Tank
+You may use Strength instead of agility when calculating your AC. 
+However, you move like a tank, and you lose 5 feet of your movement speed.
+
+One handed
++2 to hit with one handed weapons
+-5 to hit with two handed weapons
+
+Ne'er-Do-Well
+ Your companions make up for your lack of combat skills. All your companions have +25 Combat Skills and you have -25 Combat Skills.
+
+Bring it On!
+You either kill fast or die early. Both you and your enemy's AC are reduced by 7 *Enemy AC lowered just for you 
+
+Jinxed
+More critical failures for everyone around you (crit fail range raised by 3 {stackable by players who have taken this trait})
+More critical failures for you, too

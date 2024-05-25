@@ -1,0 +1,152 @@
+Name,Ranks,Level,Requirments,Description
+Fear the Reaper:,1,2,Life giver not taken,"Every time you gain a level, you gain half you hit die less maximum hit points (minimum 2). You can take an additional perk this level and every other level after. You cannot take the Life Giver."
+Life Giver,1,2,EN 6,"Your hit point maximum increases by an amount equal to twice your level when you gain this feat. Whenever you gain a level thereafter, your hit point maximum increases by an additional 2 hit pointsCannot be taken in conjunction with Fear the Reaper"
+Bounty Hunter,4,2,,"Pick one enemy type Beasts, Humans, robots, Mutants You can reroll dmg once against them when rolling damage."
+Survival Expert:,1,2,Surv 30,You have advantage on Survival checks.
+Scoundrel,1,2,Barter 30,You have advantage on Persuasion checks against humanoids that would not be attracted to you.
+Merchant Prince,1,2,Ch 6,You have advantage on Persuasion checks to sell items for more caps and to buy items for fewer caps
+Tunnel Runner,1,2,AG 8,"You can take the dash, hide, help action as a bonus action"
+Solar Powered,1,2,EN 7,"You regenerate 1 hit point at the end of each turn during initiative you spend in direct sunlight, and at the end of each minute you spend in direct sunlight outside of initiative."
+Black Widow/Lady Killer,1,2,None,+1 damage to the opposite sex and advantage on seduction attempts for certain characters*
+Cherchez La Femme/Confirmed Bachelor,1,2,None,+1 damage to the same sex and advantage on seduction attempts for certain characters*
+Jump to Conclusions,1,2,Failed at least one speech check,"When you fail to convince someone, all your hits become critical for the next turn.."
+Bound To Win:,1,2,None,"If you have more than triple advantage on an attack, and it lands, it counts as critical."
+Friend of the Night,1,2,"PE 6, Sneak 30","Your eyes adapt quickly to low-light conditions, you see better than most in the dark"
+Heavy Hitter:,1,2,Unarmed 30,Your unarmed strikes deal 1d6'+your Strength modifier.
+Iron Fist:,1,2,Unarmed 30,Your unarmed strikes deal an additional 1d4 damage.
+"Heave Ho!",1,2,ST 5 Explosives 30,All thrown weapons fly farther (50%)
+Gunslinger,1,2,Guns 30,"While wielding a pistol in one hand and no weapon in the other, you have an extra '+2 to the attack."
+The Kid:,1,2,Any weapons skill =>30,"When you engage in two-weapon fighting while wielding two weapons of the same type , you can add your proficiency bonus to the second weapon's attack rolls"
+Commando,1,2,Guns 30,"While wielding a rifle, its ranges are increased by half."
+Grunt:,1,2,Guns 30,"While wielding a submachine gun, each attack costs half as much ammunition."
+Gun Nut:,1,2,Repair 30,You gain advantage on the Repair check to maintain a weapon's condition.
+Monka Special,5,2,Agility 5,"Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll. This can be taken multiple times (5 max), increasing the additional damage by 1d6."
+Hunter,1,2,Survival 30,"In combat, you do 75% more critical damage against animals and mutated animals."
+In Shining Armor,1,2,Repair 20 Science 70,"+5 AC against energy weapons when wearing any metal armor, '+2 while wearing reflective eyewear."
+Intense Training,10,2,None,You can put a single point into any of your SPECIAL attributes.
+Junk Rounds,1,2,LK 6 Repair 45,You can craft ammo using scrap metal and tin cans.
+Light Touch,1,2,AG 6 Repair 45,While wearing light armor the number you need to roll for a crit is lowered by 1 If enemies crit you - they roll a d4 on a 1 the crit is not counted
+Old World Gourmet,1,2,EN 6Survival 45,"+25% addiction resistance. '+100% health bonus from snack foods. Scotch, vodka and wine now give you health in addition to their normal effects."
+Rapid Reload,1,2,"AG 5, Guns 30",Reload costs one lower action.(i.e. action and bonus action → action → bonus action → free action).
+Retention,1,2,IN 5,"Skill Magazines have a longer duration, they add '+2 to the relevant skill"
+Swift Learner,3,2,IN 4,"When you use a skill magazine/ book, roll 1d20. On a roll of 11 or higher, the magazine is not destroyed, and may be used again. After this feature has been used, the roll requirement to use it for the same magazine is now 14."
+Demolition Expert:,3,2,Explosives 30,When attacking with a weapon that does explosion damage that weapon Deals an additional 1 dice on damage rolls. (You may take this perk three times up to '+3)
+Light Step,1,2,"PE 6, AG 6",Floor traps or mines will not be set off.
+Super Slam,1,2,"ST 6, Melee Weapons 45",All melee (except thrown) and unarmed attacks have a chance of knocking your target down ( 1d6 decide on which number)
+Cannibal,1,4,None,You can eat a human corpse to regain 15'+ half your level hp and providing 3 food rations. afterwards the body cannot be used to make rations.
+Comprehension,1,4,IN 4,Skill magazine bonuses are '+20 to a relevant skill instead of '+10
+Educated,1,4,IN 4,You gain two more skill points every time you advance in level.
+Entomologist,1,4,"IN 4, Survival 45",You do an additional 50% damage every time you attack a mutated insect.
+Rad Child,1,4,Survival 70,"The more irradiated you are, the bigger the bonus to your healing."
+Run 'n Gun,1,4,Guns 45 or Energy Weapons 45,Lowers crit range by 1 for one-handed ranged weapons while walking or running.
+Travel Light,1,4,Survival 45,"While wearing light armor or no armor, your movement speed is increased by 20"
+Bloody Mess,1,6,None,"+3dmg overall damage, more violent death animations."
+Mad Bomber,1,6,Repair 45Explosives 45,Create new hand explosives at work benches. ( see crafting for additional info)
+Party Person:,1,6,Charisma 6,"You are immune to alcohol addiction, alcohol bonuses are doubled."
+Field Medic,1,6,40 Medicine,You are a dedicated medic among your comrades. You may attempt to revive a fallen ally at the cost of a super-stimpak.
+Chem Resistant:,,6,Endurance 6,You have advantage against becoming addicted.
+Ferocious Loyalty,1,6,CH 6,"When you drop below 50% HP *by means of enemy attacks and unintentional damage, companions gain '+4AC and '+3 dmg for that combat encounter."
+Fortune Finder,1,6,LK 5,"At the end of a long rest, you find 1d10 x your proficiency bonus caps. At the end of a short rest, you find 1d4 x your proficiency bonus caps. You may invest another point into this perk and unlock a second effect: When killing a humanoid, roll a d8. On a roll of 8, they have 1d20 x your proficiency bonus caps on them."
+Hand Loader,1,6,Repair 70,"When using Guns, you are more likely to recover cases and hulls. You also have all hand load recipes unlocked at any reloading benches."
+Lil sis/ Lil bro,1,6,Charisma 7,"Whenever someone attacks you and hits, they are marked Your companions deal an additional 10 dmg to a marked enemy once, on the next attack that lands, if you have not attacked the enemy before that""Only two enemies can be marked at once"
+More Criticals,1,6,Luck 7,Critical range lowered by 1
+Lead Belly,1,6,EN 5,-50% radiation taken from food and water sources.
+Shotgun Surgeon,1,6,Guns 45,"You may add the proficiency modifier you add to a shotgun’s attack roll, to its damage roll."
+Ace In the sleeve,1,6,Guns 50,"If all your shots miss this turn, you can use a small quick-draw holstered gun, on your chest or hip to make one final attack at advantage"
+The Professional,1,6,Sneak 70,"When you attack a creature that is unaware of you, the sneak damage is 3x instead of 2x"
+Toughness,2,6,EN 5,"You have a number of points of Toughness equal to your level times your Endurance modifier. When you would take damage, you may spend points of Toughness to reduce the damage taken by an equal number. You regain all points of Toughness at the end of a long rest."
+Vigilant Recycler,1,6,Science 70,"When using Energy Weapons, you are more likely to recover drained ammunition. You also have more efficient recycling recipes available at workbenches."
+Blind Luck,1,8,<3 perception,"You are blind but not doomed. During combat, your luck is maxed (set to 10)"
+Friend of The Friendless,1,8,No Companion or friend,"Today must be your lucky day because there is a small animal outside that wishes to be your loyal companion. Be nice and friendly, and it might grow to be a life saver."
+Potato Farmer,1,8,+40 Explosives,"You have come to the realization that some enemies carry more explosives than others. From now on, you can loot more grenades and mines from fallen enemies."
+Too Drunk to Die,1,8,Get addicted 5 times or more,While you are drunk there is absolutely nothing that can stop you. You gain a '+5 to your Damage Threshold while under the effects of alcohol.
+Cowboy,1,8,"Guns 45, Melee 45","Increases damage done by dynamite, hatchets, knives, revolvers, and lever-action guns by 1 dice of the damage type"
+Grunt,1,8,"Guns 45, Explosives 20","+3 more damage with 9mm and .45 Auto pistols and SMGs, Service Rifles, Assault and Marksman Carbines, Light Machine Guns, Frag Grenades,Grenade Rifles and Launchers, and Combat knife."
+Home on the Range,1,8,Survival 70,Can make camp almost anywhere
+Living Anatomy,1,8,Medicine 70,Shows health and Damage Threshold of any target. '+2 bonus to damage against humans and non-feral ghouls.
+Pack Rat,1,8,"IN 5, Barter 70",Items with a weight of two pounds or less now weigh half as much
+Quick Draw,1,8,AG 5,"When you roll initiative and are wielding a pistol, you may immediately make an attack."
+Rad Resistance,1,8,"EN 5, Survival 40",+40 Radiation Resistance permanently.
+Scrounger,,8,LK 5,Considerably more ammunition in stockpiles.
+Sneering Imperialist,1,8,None,+3 Damage and to hit in against dirty raider and junkie types as well as tribals
+Stonewall,1,8,"ST 6, EN 6",+3 AC against melee and unarmed attacks and cannot be knocked down during combat.
+Strong Back,1,8,"ST 5, EN 5",+50 Carry Weight.
+Terrifying Presence,1,8,Speech 70,Gain advantage on intimidation checks against foes. On success the foe is sent fleeing for 5 turns.
+Tribal Wisdom,1,8,Survival 70,"Your limbs take 50% less damage from Animals, Mutated Animals, and Mutated Insects, you gain '+25% to Poison resistance, and can eat Mutated Insects."
+Fight the Power!,1,8,None,"You've had enough of the so-called ""authorities"" pushing poor folks around! You gain '+2 AC and '+1 Critical range against anyone wearing the faction armor i.e NCR, Legion or Brotherhood of Steel."
+No Time to Think,1,10,50 Survival,"You have learned there is simply no time to think when your life is at stake. With this perk, you reload your heavy weapon for one less action faster when your health drops below 50%."
+Unexpected Happiness,1,10,Luck 7,"Today could be the day! From time to time, you may uncover vast treasures in the most unexpected of places."
+And Stay Back,1,10,Guns 70,Shotguns have a chance of knocking an enemy back (1d6)
+Animal Friend,2,10,"CH 6, Survival 45","On 1st rank, hostile animals become friendly. On 2nd rank they come to your aid against enemies except against other animals."
+Finesse,1,10,None,+1 Critical range
+Here and Now,1,10,None,You instantly level up again.
+Math Wrath,1,10,Science or Energy weapons 70,You can use a bonus action to attack with any energy weapons
+Miss Fortune,1,10,LK 6,"On a critical hit, roll a number of d6 equal to your proficiency bonus. On a roll of 5 or 6, you deal an additional 10 damage. You can not benefit from this perk again for 1 minute"
+Mister Sandman,1,10,Sneak 60,"Can instantly kill a sleeping NPC, and earns bonus XP"
+Mysterious Stranger,1,10,LK 6,"On a critical hit, roll a number of d6 equal to your proficiency bonus. On a roll of 5 or 6, you deal an additional 10 damage. You can not benefit from this perk again for 1 minute"
+Nerd Rage!,1,10,"IN 5, Science 50",+5 AC and Strength increased to 10 whenever health is 20% or lower
+Night Person,1,10,None,+2 Intelligence and '+2 Perception between 6:00 P.M. and 6:00 A.M.
+Plasma Spaz,1,10,Energy Weapons 70,Can make a plasma weapon reaction attack once per turn
+Alertness,1,12,PE > 6 and < 9,+2 Perception when crouched and still
+Fast Metabolism,1,12,,When you heal yourself with stimpacks they heal you an additional 2d8 hp
+One Way or Another,1,12,50 Guns and 50 Explosives,...and you thought all along sniper rifles were the only weapons that could score headshots. If you score a headshot when using a launcher you deal beyond fatal damage. * the shot is taken at a -5 penalty
+Ghastly Scavenger,1,12,Cannibal perk,"When you're in Sneak mode, you gain the option to eat a super mutant or feral ghoul corpse to regain hit points, but lose Karma."
+Heavyweight,1,12,ST 7,Weapons with a weight of more than 10 is cut in half. This does not affect weapons modded to under 10 wg.
+Hit the Deck,1,12,Explosives 70,"As a reaction immediately before taking explosive damage, you may become prone. While prone, you are resistant to explosive damage."
+Hobbler,1,12,PE 7,Your chance to hit an opponents legs is increased by '+5
+Long Haul,1,12,"EN 6, Barter 70",You may hold a weight of objects equal to 1/4 your total carrying capacity in each of your hands. Held objects do not count against your carrying capacity.
+Piercing Strike,1,12,Unarmed 70,All your unarmed and melee attacks negate 7 points of AC.
+Pyromaniac,1,12,Explosives 60,+50% damage with fire-based weapons.
+Robotics Expert,1,12,Science 50,"+25% damage to robots, can shut down robots by sneaking up on them"
+Silent Running,1,12,"AG 6, Sneak 50","When you take the hide action, you may immediately take the dash action."
+Sniper,1,12,"PE 6, AG 6",You gain '+2 to attack rolls while benefiting from the Scope weapon property
+Splash Damage,1,12,Explosives 70,Explosives have a 25% larger area of effect.
+Unstoppable Force,1,12,"ST 7, Melee Weapons 90",You gain a '+4 bonus to your melee attack and damage rolls.
+Adamantium Skeleton,1,14,None,"When a critical hit is made against you, you may roll 1d20. On a roll of 10 or lower, it instead counts as a regular hit."
+Center of Mass,1,14,Guns 70,"When you have disadvantage on an attack roll, but either of your rolls would be a critical hit, you may use that die regardless of disadvantage."
+Chemist,1,14,Medicine 60,"Chems last twice as long, unlock chem recipies"
+Jury Rigging,1,14,Repair 90,Repair any item using a roughly similar item.
+Purifier,1,14,None,"You do 50% extra damage with melee and unarmed weapons against centaurs, nightstalkers, spore plants, spore carriers, deathclaws,super mutants, and feral ghouls."
+Action Boy/Action Girl,2,16,AG 6,+10ft movement one additional attack per attack action
+Better Criticals,1,16,"PE 6, LK 6",+50% damage with critical hits
+Chem Resistant,1,16,Medicine 60,Half as likely to get addicted.
+Meltdown,1,16,Energy Weapons 90,Foes killed by your Energy Weapons emit a corona of harmful energy. Kills splash dmg to anything within 5ft.
+Tag!,1,16,None,"+1 ""tag"" skill: '+15 points to that skill."
+Weapon Handling,1,16,ST < 10,Weapon ST requirements are now 2 points lower than normal for you.
+Computer Whiz,1,18,"IN 7, Science 70",Can hack a locked down terminal with four more chances.
+Concentrated Fire,1,18,"Energy Weapons 60, Guns 60","When you make an attack against creature and it hits, you gain a '+1 bonus to any additional attacks you make against them until the end of your turn"
+Wimp in Silence,1,18,70 Sneak,"You have grown up to be shy in public. Thus, your real potential only appears when you use a stealth boy. With this perk, you inflict significantly more damage while under the effects of any stealthboy. ( '+1x ) Normal sneak attack is 2x"
+Limb Grinder,1,18,6 Perception and 60 Guns,The joy of killing is greater when the body of your enemy is torn apart. When aiming at a limb you deal both more normal damage when you use the Minigun or Gatling Laser ( additional 2 dice ) -3 to hit
+Infiltrator,1,18,"PE 7, Lockpick 70",Can pick a broken lock with one more bobby pin.
+Paralyzing Palm,1,18,Unarmed 70,"As a bonus action immediately after a successful unarmed attack, you may make an additional unarmed attack, causing the target to become stunned until the beginning of your next turn on a hit."
+Walker Instinct,1,18,Survival 50,"+1 Perception and Agility when outside, you notice enemies from very far away"
+Kleptomaniac Punch,1,20,70 Unarmed and 70 Sneak,"Your stealing technique is quite artistic. With this perk, each punch has a chance to steal all of your opponent's equipment."
+Atomic!,1,20,EN 6,Your rad pool maximum is doubled.
+Explorer,1,20,None,"On your travels you find a random map for treasure ( secret bunker, weapons, a car ? )"
+Eye for Eye,1,20,None,"For each crippled limb you have, you do an additional '+5 damage."
+Grim Reaper's Sprint,1,20,None,"When you reduce a creature to 0 hit points, you may immediately make an additional attack"
+Ninja,1,20,"Melee Weapons 70, Sneak 70","+3 critical range with melee and unarmed weapons, damage with melee/unarmed sneak attack criticals is 5x"
+Them's Good Eatin,1,20,Survival 55,Any living creature you kill has a 50% chance to have the potent healing items thin red paste or blood sausage when looted.
+Irradiated Beauty,1,22,EN 8,You regain your hit point maximum and remove all rad points at the end of a long or short rest.
+The Studier of the Blade,1,22,7 Luck and 70 Melee Weapons,"Within a blink of an eye, your enemy may be sliced in half.On a critical hit, roll a number of d6 equal to your proficiency bonus. On a roll of 5 or 6, you deal an additional 10 damage. You can not benefit from this perk again for 1 minute"
+Beguiling influence,1,22,Speach 90,Once per long rest amidst combat you can coerce an enemy to fight on your side until you or the party hurt them
+Knife in the Shadow,1,22,80 Melee Weapons and 80 Sneak,"You have mastered the most devastating backstab. With this perk, your sneak hits inflict fatal damage when you successfully sneak up on a target and attack with your one-handed blade weapon."
+Laser Commander,1,22,Energy Weapons 90,You do an extra '+4 damage and have a '+2 critically hit range with any laser weapon.
+The last thing you never see,1,22,Guns 90,"When using a scoped rifle you can take aim for 3 turns at an enemy within range, which you can see for the duration, and attack it for a sure hit after the 3 turns The attack is counted for having advantageYou deal a max damage critical hit"
+None shall Pass,1,22,Guns 90,You shoot all your revolver cylinders in one actionThe second shot receives a - 1 to hitThe third a -2And so on
+Nuka Chemist,1,22,Science 90,Unlocks special Nuka-Cola recipes at the Workbench.
+Wingman,1,22,Charisma9,"You can hype up one of your companions on your turn as an action, they get '+10 dmg to an attack"
+Voracious Reader,1,22,IN 7,Damaged books become blank magazines;You can copy existing magazines into blank magazines
+Slayer,1,24,"AG 7, Melee or Unarmed 90","You may take the Attack action as a bonus action, but only while wielding Melee / Unarmed."
+Nerves of Steel,1,26,AG 7,You can no longer be frightened or charmed.
+Rad Absorption,1,28,EN 7,-1 Rad every 20 seconds.
+Unexpected Mutation,1,28,90 Survival,You have mutated so badly that you gain health over time and even regenerate broken limbs.
+Roughin' It,1,28,Survival 100,Sleeping outside gives Well Rested benefit
+Burden to Bear,1,30,"ST 6, EN 6",+50 carry weight
+Implant GRX,2,30,EN 8,"On your turn, you may take an additional action and potential bonus action. You may use this feature once, regaining use at the end of a long rest."
+Broad Daylight,1,36,Sneak 65,While sneaking and wearing a pip Boy you get a '+35 sneak bonus
+Superior Mind,1,40,9 Intelligence,"You may attempt to blow up your target's head via dialogue. If your target has a superior mind, your head will become crippled instead and you will be left at 10hp"
+Certified Tech,1,40,,"+5 critical range chance against robots, 100% chance of finding an extra crafting component on destroyed robots"
+Ain't Like That,1,50,Karma < -250,"Karma reset to 0, '+25% AP regeneration rate, '+20% attack speed, immunity to critical hits"
+Just Lucky I'm Alive,1,50,Karma > -250 and < 250,"+5 Luck for 3 minutes upon finishing a battle with less than 25% health immunity to critical hits, '+50% critical damage"
+Thought You Died,1,50,Karma at least 250,"+10 Health per 100 Karma; Karma reset to 0, '+10% damage, immunity to critical hits."
