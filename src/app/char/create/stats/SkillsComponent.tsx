@@ -18,20 +18,14 @@ interface StatsComponentProps {
 const SkillsComponent: FC<StatsComponentProps> = ({ char, setChar }) => {
 	const [availablePoints, setAvailablePoints] = useState(STARTING_SKILL_POINTS)
 	const [skillMods, setSkillMods] = useState<Skills>(DEFAULT_SKILL_MODS)
-	// const { char, setChar } = useContext(CharContext)
-
 	const skills: Skill[] = Object.keys(char.skills) as Skill[]
-
-	function reset() {
-		setAvailablePoints(STARTING_SKILL_POINTS)
-		setChar({ ...char, skills: DEFAULT_SKILLS })
-	}
 
 	function tagSkill(skill: Skill) {
 		// Check if skill has been tagged
 		const index = char.taggedSkills.indexOf(skill)
 		const isSkillTagged = index > -1
 		if (!isSkillTagged && char.availableTags > 0) {
+			// Tag skill
 			setChar({ ...char, availableTags: char.availableTags - 1 })
 			char.taggedSkills.push(skill)
 		}
@@ -45,26 +39,15 @@ const SkillsComponent: FC<StatsComponentProps> = ({ char, setChar }) => {
 	}
 
 	useEffect(() => {
-		const skillMods = calculateStatMods(char.stats, char.taggedSkills)
-		setSkillMods(skillMods)
-	}, [char.stats, char.level, char.taggedSkills, char.availableTags])
+		const newSkillMods = calculateStatMods(char.stats, char.taggedSkills)
+		setSkillMods(newSkillMods)
+	}, [char])
 
 	const updateCharSkills = (skill: Skill, increment: -1 | 1 | 0 = 0) => {
-		// TODO. figure out how to separate base skills and mods so they don't keep compounding
 		let newSkills = { ...char.skills }
 		newSkills[skill] = newSkills[skill] + increment
 		console.log('new skills', newSkills)
 		setAvailablePoints(availablePoints - increment)
-
-		// Skills with added modifiers from stats and and tags
-		const skillsWithMods = Object.keys(newSkills).reduce((acc, skill) => {
-			const totalSkill = newSkills[skill as Skill] + skillMods[skill as Skill]
-			return { ...acc, [skill]: totalSkill }
-		}, {} as Skills)
-		console.log('total: ', skillsWithMods)
-
-		// TODO: add char property to store skill mods and caluclate them when needed
-		// setChar({ ...char, skills: char.s })
 	}
 
 	const incrementSkill = (char: Char, skill: Skill, increment: -1 | 1) => {
@@ -77,8 +60,6 @@ const SkillsComponent: FC<StatsComponentProps> = ({ char, setChar }) => {
 		if (inssuficientPoints || skillUnderflow || skillOverflow) {
 			return
 		}
-
-		// Update char
 
 		updateCharSkills(skill, increment)
 	}

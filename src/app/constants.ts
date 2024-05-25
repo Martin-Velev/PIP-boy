@@ -88,3 +88,26 @@ export const DEFAULT_CHAR = {
 	traits: [] as Trait[],
 	availableTraits: STARTING_TRAITS,
 }
+
+// Int 1 = 11 skill points
+// Int 2 = 11 skill points
+// Int 3 = 12 skill points
+// Int 4 = 12 skill points
+// Int 5 = 13 skill points
+// Int 6 = 13 skill points
+// Int 7 = 14 skill points
+// Int 8 = 14 skill points
+// Int 9 = 15 skill points
+// Int 10 = 15 skill points
+export const INT_TO_SKILL_GAIN = {
+	1: 11,
+	2: 11,
+	3: 12,
+	4: 12,
+	5: 13,
+	6: 13,
+	7: 14,
+	8: 14,
+	9: 15,
+	10: 15,
+}

@@ -1,3 +1,4 @@
+import { INT_TO_SKILL_GAIN } from './app/constants'
 import { Char } from './app/types/char'
 import { Perk } from './app/types/perk'
 
