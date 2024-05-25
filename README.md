@@ -34,3 +34,20 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# TODO
+
+## Level up
+
+-   [ ] level tracker on player
+-   [ ] Add skills according to INT
+-   [ ] Track available Perks
+    -   [ ] Take note of Don't fear the reaper (perk every level instead of every other)
+-   [ ] Track HP gain
+    -   [ ] Note
+    -   [ ] HP roller / Manual add HP
+    -   [ ]
+
+## Add custom bonuses
+
+##
