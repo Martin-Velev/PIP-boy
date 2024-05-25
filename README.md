@@ -10,7 +10,7 @@ Open [http://localhost:3000](http://localhost:3000)
 
 # TODO
 
-## [ ] Level up
+## Level up
 
 DFR="Don't Fear the Reaper"
 
@@ -23,6 +23,9 @@ DFR="Don't Fear the Reaper"
     -   [ ] HP roller / Manual add HP
     -   [ ] Keep track of DFR (it halves health gain)
 
-## [ ] Add custom bonuses
+## Add custom bonuses
 
-## [ ]
+-   [+] Add bonus from Race
+-   [-] Background
+    -   [X] Each background adds dif skills
+-   [ ] 
