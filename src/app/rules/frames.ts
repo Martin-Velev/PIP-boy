@@ -6,7 +6,7 @@ export const FRAMES = ['BIG_BRAIN', 'LIGHT_FRAME', 'AVERAGE_JOE', 'BIG_HOSS', 'H
 // Average Joe: Your hit die is 1d8.
 // Big Hoss: Your Agility  decreases by -2 and your hit die is 1d10
 // Hulk: Your Intelligence and Agility  both decrease by -2, and your hit die is 1d12
-export const FRAME_HEALTH_GAIN = {
+export const FRAME_HIT_DIE_MAP = {
 	BIG_BRAIN: 4,
 	LIGHT_FRAME: 6,
 	AVERAGE_JOE: 8,

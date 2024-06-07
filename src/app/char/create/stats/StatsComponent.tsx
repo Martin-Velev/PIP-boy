@@ -35,13 +35,25 @@ const StatsComponent: FC<CharProps> = ({ char, setChar }) => {
 			// Mod skills
 		}
 
+		let mod = 0
+		const relevantModifiers: { [key: string]: number } = char.statMods[stat as Stat]
+		if (Object.keys(relevantModifiers).length > 0) {
+			console.log('keys', Object.keys(relevantModifiers))
+
+			console.log('searching up ', relevantModifiers)
+			for (const modSource in relevantModifiers) {
+				const relevantMod = relevantModifiers[modSource]
+				if (!relevantMod) continue
+				mod += relevantMod
+			}
+		}
 		return (
 			<li key={`stat-${stat}`} className='flex flex-row'>
 				<div className='w-1/2 uppercase'>{stat}</div>
 				<button className='w-1/6' onClick={(e) => incrementStat(-1)}>
 					-
 				</button>
-				<div className='w-1/6 text-center'>{char.stats[stat] + (statMods[stat] || 0)} </div>
+				<div className='w-1/6 text-center'>{char.stats[stat] + mod} </div>
 				<button className='w-1/6' onClick={(e) => incrementStat(1)}>
 					+
 				</button>
@@ -57,9 +69,6 @@ const StatsComponent: FC<CharProps> = ({ char, setChar }) => {
 						<label className='mr-5'>Available Points</label>
 						{availableStatPoints}
 					</div>
-					{/* <button onClick={reset} id='reset-button'>
-						Reset
-					</button> */}
 				</div>
 
 				<div className='w-full p-10'>

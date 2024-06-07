@@ -26,6 +26,16 @@ export const DEFAULT_STATS = {
 	luck: START_STAT,
 }
 
+export const DEFAULT_STAT_MODS = {
+	strength: {},
+	perception: {},
+	endurance: {},
+	charisma: {},
+	intelligence: {},
+	agility: {},
+	luck: {},
+}
+
 export const DEFAULT_SKILLS = {
 	barter: MIN_SKILL,
 	energyWeapons: MIN_SKILL,
@@ -67,6 +77,7 @@ export const DEFAULT_HUMAN: Char = {
 	frame: 'AVERAGE_JOE',
 
 	stats: DEFAULT_STATS,
+	statMods: DEFAULT_STAT_MODS,
 
 	skills: DEFAULT_SKILLS,
 	taggedSkills: [] as Skill[],
@@ -82,5 +93,4 @@ export const DEFAULT_HUMAN: Char = {
 	background: BACKGROUNDS[0],
 	perks: [],
 	availablePerks: 0,
-
 }

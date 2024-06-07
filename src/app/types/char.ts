@@ -22,6 +22,15 @@ export type Char = {
 		agility: number
 		luck: number
 	}
+	statMods: {
+		strength: { [key: string]: number }
+		perception: { [key: string]: number }
+		endurance: { [key: string]: number }
+		charisma: { [key: string]: number }
+		intelligence: { [key: string]: number }
+		agility: { [key: string]: number }
+		luck: { [key: string]: number }
+	}
 
 	skills: {
 		barter: number

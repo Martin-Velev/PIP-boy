@@ -1,7 +1,7 @@
 import { Char } from '../types/char'
 import { FTR } from '../types/traits'
 import { MAX_STAT, MIN_STAT } from './defaults'
-import { FRAME_HEALTH_GAIN } from './frames'
+import { FRAME_HIT_DIE_MAP } from './frames'
 import { getStatMod } from './stats'
 
 export const INT_TO_SKILL_GAIN = {
@@ -28,8 +28,8 @@ export function levelUp(char: Char, hpGain: number = 0): Char {
 
 	// ADD HP
 	// Get the frame of the character
-	const frame = newChar.frame as keyof typeof FRAME_HEALTH_GAIN
-	const hitDie = FRAME_HEALTH_GAIN[frame]
+	const frame = newChar.frame as keyof typeof FRAME_HIT_DIE_MAP
+	const hitDie = FRAME_HIT_DIE_MAP[frame]
 	if (!hpGain) {
 		const roll = Math.floor(Math.random() * hitDie) + 1
 		hpGain = roll
