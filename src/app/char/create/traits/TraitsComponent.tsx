@@ -6,7 +6,6 @@ import { CharProps } from '@/app/common/props'
 
 const TraitsComponent: React.FC<CharProps> = ({ char, setChar }) => {
 	const [traits, setTraits] = useState([])
-	// const [selectedTraits, setSelectedTraits] = useState([] as Trait[])
 
 	// Fetch the traits from the server
 	useEffect(() => {

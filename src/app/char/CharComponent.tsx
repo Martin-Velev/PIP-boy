@@ -10,10 +10,11 @@ import PerksComponent from './create/perks/PerksComponent'
 import BackgroundPicker from './create/bacground/BackgroundPicker'
 import LevelUpButton from './create/levelUp/LevelUpButton'
 import FramePicker from './create/frames/FramePicker'
+import TraitsComponent from '@/app/char/create/traits/TraitsComponent'
+import SaveChar from '@/app/common/SaveChar'
+import LoadChar from '@/app/common/LoadChar'
 
 const CharComponent: FC<CharProps> = ({ char, setChar }) => {
-	// const { char, setChar } = useContext(CharContext)
-
 	function handleNameChange(e: React.ChangeEvent<HTMLInputElement>) {
 		const newChar = { ...char, name: e.target.value }
 		setChar(newChar)
@@ -22,10 +23,23 @@ const CharComponent: FC<CharProps> = ({ char, setChar }) => {
 	return (
 		<>
 			<div>
+				<div>
+					Load:
+					<LoadChar setChar={setChar} />
+				</div>
 				<div className='w-full text-6xl text-center min-height-12'>
 					<label htmlFor='name'>Name:</label>
 					<input type='text' id='name' value={char.name} onChange={handleNameChange} />
 				</div>
+
+				<div>
+					<RacePicker char={char} setChar={setChar} />
+				</div>
+
+				<div>
+					<FramePicker char={char} setChar={setChar} />
+				</div>
+				
 				<div className='flex flex-row w-full'>
 					<div className='w-1/2'>
 						<StatsComponent char={char} setChar={setChar} />
@@ -37,24 +51,8 @@ const CharComponent: FC<CharProps> = ({ char, setChar }) => {
 
 				<div>
 					<h3>Traits:</h3>
-					<ul>
-						{char.traits.map((trait, i) => (
-							<li key={i}>
-								<h4>{trait.name}</h4>
-
-								<p>{trait.description}</p>
-							</li>
-						))}
-					</ul>
+					<TraitsComponent char={char} setChar={setChar} />
 				</div>
-			</div>
-
-			<div>
-				<RacePicker char={char} setChar={setChar} />
-			</div>
-
-			<div>
-				<FramePicker char={char} setChar={setChar} />
 			</div>
 
 			<div>
@@ -67,6 +65,11 @@ const CharComponent: FC<CharProps> = ({ char, setChar }) => {
 
 			<div>
 				<LevelUpButton char={char} setChar={setChar} />
+			</div>
+
+			<div>
+				SAVE:
+				<SaveChar char={char} />
 			</div>
 		</>
 	)
