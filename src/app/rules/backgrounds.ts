@@ -10,15 +10,6 @@ export type Background = {
 
 export const BACKGROUNDS: Background[] = [
 	{
-		name: 'Caravanner',
-		skillMods: {
-			barter: 5,
-			survival: 5,
-		},
-		description:
-			'You belong to one of the caravan companies\nthat keep trade moving throughout the Mojave\nand other areas of the wasteland. Examples\ninclude the Crimson Caravan and the Happy\nTrails Caravan Company.\nSkill Bonus: Barter +5, Survival +5 \nTool Proficiencies: One type of gaming set,\nYou Know how to ride a horse\nEquipment: an iron pot, a lighter, a set\nof traveler’s clothes, a symbol of your\naffiliation to your caravan company, a pouch\ncontaining 15 caps.\nFeature: Caravanner’s Contacts\nAs a member of a caravan company, you can\nexpect to receive room and board at any of\nthat company’s own wayhouses, if it has any.\nYou also establish relationships with in\ncolonel settlements, allowing you to find a place to stay at a 50% discount. Finally,you understand the caravanner’s code, and\nknow how to approach other traders out in the\nwastes. You can almost always persuade other\ntravelers to share their fires, their shelter,\nand sometimes their food with you and your\ncomrades. Of course, you are expected to offer\nthe same courtesies.',
-	},
-	{
 		name: 'Courier',
 		skillMods: {
 			survival: 5,
@@ -26,6 +17,15 @@ export const BACKGROUNDS: Background[] = [
 		},
 		description:
 			'You are a courier, one of the brave few who\nmake their living ensuring that the disparate\ncommunities of the wasteland remain in touch.\nWhen caravans or larger groups are going\nthe same way you join them for safety, but\nsometimes the only way to ensure a package\narriving on time is to risk the journey alone.\nThe role of courier is a job that attracts\nthe brave and the reckless, and in which only\nskilled survivors thrive. Most couriers are\nself-employed, but typically establish working\nrelationships with one or more delivery\ncompanies, such as the Mojave Express in\nPrimm.\nSkill Bonus: Survival + 5, Guns +5\nTool Proficiencies: Two chosen from any\ngaming set, any handheld musical instrument,\nor Horse riding \nEquipment: an iron pot, a lighter, a set\nof traveler’s clothes, one package (worth 30\ncaps upon delivery in the next settlement you\nvisit, either to the local delivery company if\nthere is one or else the addressee).\nFeature: Courier’s Cachet\nAll civilized folk respect a courier and the\nrole they play in keeping communications open.\nAs a courier, you can generally find a place\nto stay at a 50% discount in any settlement,\nexcept among raiders and tribals. As a seasoned\ntraveler you understand the caravanner’s code,\nand know how to approach other traders out in\nthe wastes. You can almost always persuade\nother travelers to share their fires, their\nshelter, and sometimes their food with you and\nyour comrades. Of course, you are expected to\noffer the same courtesies.\n',
+	},
+	{
+		name: 'Caravanner',
+		skillMods: {
+			barter: 5,
+			survival: 5,
+		},
+		description:
+			'You belong to one of the caravan companies\nthat keep trade moving throughout the Mojave\nand other areas of the wasteland. Examples\ninclude the Crimson Caravan and the Happy\nTrails Caravan Company.\nSkill Bonus: Barter +5, Survival +5 \nTool Proficiencies: One type of gaming set,\nYou Know how to ride a horse\nEquipment: an iron pot, a lighter, a set\nof traveler’s clothes, a symbol of your\naffiliation to your caravan company, a pouch\ncontaining 15 caps.\nFeature: Caravanner’s Contacts\nAs a member of a caravan company, you can\nexpect to receive room and board at any of\nthat company’s own wayhouses, if it has any.\nYou also establish relationships with in\ncolonel settlements, allowing you to find a place to stay at a 50% discount. Finally,you understand the caravanner’s code, and\nknow how to approach other traders out in the\nwastes. You can almost always persuade other\ntravelers to share their fires, their shelter,\nand sometimes their food with you and your\ncomrades. Of course, you are expected to offer\nthe same courtesies.',
 	},
 	{
 		name: 'Charlatan',

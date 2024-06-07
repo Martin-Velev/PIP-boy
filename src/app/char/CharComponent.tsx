@@ -7,7 +7,9 @@ import { Char } from '../types/char'
 import { CharProps } from '../common/props'
 import RacePicker from './create/race/RacePicker'
 import PerksComponent from './create/perks/PerksComponent'
-import BackgroundPicker from './create/background/BackgroundPicker'
+import BackgroundPicker from './create/bacground/BackgroundPicker'
+import LevelUpButton from './create/levelUp/LevelUpButton'
+import FramePicker from './create/frames/FramePicker'
 
 const CharComponent: FC<CharProps> = ({ char, setChar }) => {
 	// const { char, setChar } = useContext(CharContext)
@@ -52,11 +54,19 @@ const CharComponent: FC<CharProps> = ({ char, setChar }) => {
 			</div>
 
 			<div>
+				<FramePicker char={char} setChar={setChar} />
+			</div>
+
+			<div>
 				<BackgroundPicker char={char} setChar={setChar} />
 			</div>
 
 			<div>
 				<PerksComponent char={char} setChar={setChar} />
+			</div>
+
+			<div>
+				<LevelUpButton char={char} setChar={setChar} />
 			</div>
 		</>
 	)

@@ -1,11 +1,12 @@
 import { CharProps } from '@/app/common/props'
-import { RACES, Race } from '@/app/rules/races'
-import React, { FC } from 'react'
+import { RACES, Race, adjustForRace } from '@/app/rules/races'
+import React, { FC, useState } from 'react'
 
 const RacePicker: FC<CharProps> = ({ char, setChar }) => {
 	const handleRaceChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
 		const race = event.target.value as Race
-		setChar({ ...char, race })
+		const newChar = adjustForRace({ ...char, race })
+		setChar({ ...newChar, race })
 	}
 
 	return (

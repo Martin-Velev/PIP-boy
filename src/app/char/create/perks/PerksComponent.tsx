@@ -50,12 +50,14 @@ const PerksComponent: FC<CharProps> = ({ char, setChar }) => {
 	}
 
 	return (
-		<>
+		<div className='flex flex-col'>
+			<h2>Available Perks: {char.availablePerks}</h2>
 			<div className='w-full flex flex-row'>
 				<div className='w-1/2'>
 					<ul>
 						{perks.sort(levelSorter).map((perk: any) => (
 							<li
+								key={perk.name}
 								className='hover:border p-1 flex flex-row'
 								onClick={() => highlightPerk(perk)}
 							>
@@ -97,7 +99,7 @@ const PerksComponent: FC<CharProps> = ({ char, setChar }) => {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	)
 }
 

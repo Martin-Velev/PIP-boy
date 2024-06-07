@@ -1,9 +1,11 @@
+import { Char } from '../types/char'
 import { Skill, SKILL_TO_STAT, Skills } from '../types/skills'
 import { Stats, Stat } from '../types/stat'
 import { DEFAULT_SKILLS } from './defaults'
 
 // RETURNS list of mods
-export function calculateStatMods(stats: Stats, taggedSkills: Skill[] = []) {
+export function calculateSkillMods(char: Char) {
+	const { stats, taggedSkills, background } = char
 	const allSkills = Object.keys(DEFAULT_SKILLS) as Skill[]
 
 	// Get skill gain from SPECIAL stats
@@ -33,8 +35,12 @@ export function calculateStatMods(stats: Stats, taggedSkills: Skill[] = []) {
 	})
 
 	// Add skills from Background
-	
-
+	if (background) {
+		const { skillMods: bgSkillMods } = background
+		Object.keys(bgSkillMods).forEach((skill) => {
+			skillMods[skill as Skill] += bgSkillMods[skill as Skill]
+		})
+	}
 
 
 	return skillMods
@@ -48,5 +54,3 @@ export function addSkillMods(skills: Skills, mods: Skills) {
 	}
 	return newSkills
 }
-
-

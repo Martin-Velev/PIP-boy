@@ -7,7 +7,7 @@ import {
 	MIN_SKILL,
 	MAX_SKILL,
 } from '@/app/rules/defaults'
-import { calculateStatMods } from '@/app/rules/skills'
+import { calculateSkillMods } from '@/app/rules/skills'
 import { Skills, Skill, SkillName } from '@/app/types/skills'
 
 interface StatsComponentProps {
@@ -16,7 +16,7 @@ interface StatsComponentProps {
 }
 
 const SkillsComponent: FC<StatsComponentProps> = ({ char, setChar }) => {
-	const [availablePoints, setAvailablePoints] = useState(STARTING_SKILL_POINTS)
+	// const [availablePoints, setAvailablePoints] = useState(STARTING_SKILL_POINTS)
 	const [skillMods, setSkillMods] = useState<Skills>(SKILL_MOD_BOILERPLATE)
 	const skills: Skill[] = Object.keys(char.skills) as Skill[]
 
@@ -39,7 +39,7 @@ const SkillsComponent: FC<StatsComponentProps> = ({ char, setChar }) => {
 	}
 
 	useEffect(() => {
-		const newSkillMods = calculateStatMods(char.stats, char.taggedSkills)
+		const newSkillMods = calculateSkillMods(char)
 		setSkillMods(newSkillMods)
 	}, [char])
 
@@ -47,12 +47,17 @@ const SkillsComponent: FC<StatsComponentProps> = ({ char, setChar }) => {
 		let newSkills = { ...char.skills }
 		newSkills[skill] = newSkills[skill] + increment
 		console.log('new skills', newSkills)
-		setAvailablePoints(availablePoints - increment)
+		const newChar = {
+			...char,
+			availablePoints: char.availableSkillPoints - increment,
+		}
+		setChar(newChar)
+		// setAvailablePoints(availableSkillPoints - increment)
 	}
 
 	const incrementSkill = (char: Char, skill: Skill, increment: -1 | 1) => {
 		// No points available
-		const inssuficientPoints = increment === 1 && availablePoints === 0
+		const inssuficientPoints = increment === 1 && char.availableSkillPoints === 0
 		// Can't reduce skill below 5
 		const skillUnderflow = increment === -1 && char.skills[skill] === MIN_SKILL
 		// Can't increase skill above 100
@@ -89,7 +94,7 @@ const SkillsComponent: FC<StatsComponentProps> = ({ char, setChar }) => {
 					<div className='w-1/2 flex flex-col'>
 						<div>
 							<label className='mr-5'>Available Points</label>
-							{availablePoints}
+							{char.availableSkillPoints}
 						</div>
 					</div>
 					<div className='w-1/2 flex flex-col'>

@@ -1,39 +1,19 @@
 import { CharProps } from '@/app/common/props'
-import { Background } from '@/app/rules/backgrounds'
+import { BACKGROUNDS, Background } from '@/app/rules/backgrounds'
 import React, { FC, useEffect, useState } from 'react'
 
-const BackgroundPicker: FC<CharProps> = () => {
-	const [backgrounds, setBackgrounds] = useState<Background[]>([])
-	const [selectedBackground, setSelectedBackground] = useState<Background>()
-
-	useEffect(() => {
-		const fetchBackgrounds = async () => {
-			try {
-				const response = await fetch('/api/backgrounds')
-				const data = await response.json()
-				const { backgrounds } = data
-
-				console.log('backgrounds', backgrounds)
-				setBackgrounds(backgrounds)
-				setSelectedBackground(backgrounds[0])
-			} catch (error) {
-				console.error('Error fetching backgrounds:', error)
-			}
-		}
-
-		fetchBackgrounds()
-	}, [])
+const BackgroundPicker: FC<CharProps> = ({ char, setChar }) => {
+	const backgrounds = BACKGROUNDS
+	const [selectedBackground, setSelectedBackground] = useState<Background>(BACKGROUNDS[0])
 
 	const onBackgroundChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+		// TODO: make this in to a map
 		const background = backgrounds.find((b) => b.name === event.target.value)
 		if (!background) return
 		console.log('skill mods', background.skillMods)
 
-        
-	}
-
-	if (!backgrounds || !selectedBackground) {
-		return <div>Loading...</div>
+		setSelectedBackground(background)
+		setChar({ ...char, background })
 	}
 
 	return (
@@ -59,14 +39,11 @@ const BackgroundPicker: FC<CharProps> = () => {
 
 					<div>
 						<>
-							<p>
-								{selectedBackground.description.split('\n').map((line) => (
-									<>
-										{line}
-										<br />
-									</>
+							<div>
+								{selectedBackground.description.split('\n').map((line, i) => (
+									<p key={`desc-${i}`}>{line}</p>
 								))}
-							</p>
+							</div>
 						</>
 					</div>
 				</div>

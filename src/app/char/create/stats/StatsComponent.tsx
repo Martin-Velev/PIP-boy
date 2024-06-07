@@ -1,5 +1,5 @@
 'use client'
-import React, { FC, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import { Stat } from '@customTypes/stat'
 import { Char } from '../../../types/char'
 import { CharProps } from '@/app/common/props'
@@ -7,6 +7,7 @@ import { MIN_STAT, MAX_STAT } from '@/app/rules/defaults'
 
 const StatsComponent: FC<CharProps> = ({ char, setChar }) => {
 	const { availableStatPoints } = char
+	const [statMods, setStatMods] = useState<{ [key: string]: number }>({})
 
 	const stats: Stat[] = Object.keys(char.stats) as Stat[]
 	const statList = stats.map((stat: Stat) => {
@@ -40,7 +41,7 @@ const StatsComponent: FC<CharProps> = ({ char, setChar }) => {
 				<button className='w-1/6' onClick={(e) => incrementStat(-1)}>
 					-
 				</button>
-				<div className='w-1/6 text-center'>{char.stats[stat]} </div>
+				<div className='w-1/6 text-center'>{char.stats[stat] + (statMods[stat] || 0)} </div>
 				<button className='w-1/6' onClick={(e) => incrementStat(1)}>
 					+
 				</button>
@@ -70,3 +71,6 @@ const StatsComponent: FC<CharProps> = ({ char, setChar }) => {
 }
 
 export default StatsComponent
+function calculateStatMods(char: Char) {
+	throw new Error('Function not implemented.')
+}

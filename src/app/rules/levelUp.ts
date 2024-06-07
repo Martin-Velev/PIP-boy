@@ -2,6 +2,7 @@ import { Char } from '../types/char'
 import { FTR } from '../types/traits'
 import { MAX_STAT, MIN_STAT } from './defaults'
 import { FRAME_HEALTH_GAIN } from './frames'
+import { getStatMod } from './stats'
 
 export const INT_TO_SKILL_GAIN = {
 	1: 11,
@@ -16,7 +17,7 @@ export const INT_TO_SKILL_GAIN = {
 	10: 15,
 }
 
-export function levelUp(char: Char, hpGain: number): Char {
+export function levelUp(char: Char, hpGain: number = 0): Char {
 	const newChar = { ...char }
 
 	// LEVEL UP
