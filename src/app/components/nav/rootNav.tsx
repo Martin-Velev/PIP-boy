@@ -1,6 +1,4 @@
-import Nav from '@/app/common/Nav'
-import { NAV_HEIGHT } from '@/app/constants'
-import Link from 'next/link'
+import Nav from '@/app/components/common/Nav'
 
 const RootNav = () => {
 	const routes = [
