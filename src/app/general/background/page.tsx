@@ -1,5 +1,5 @@
 'use client'
-import BackgroundPicker from '@/app/char/create/bacground/BackgroundPicker'
+import BackgroundPicker from '@/app/components/BackgroundPicker'
 import { CharContext } from '@/app/providers/CharProvider'
 import React, { FC, useContext } from 'react'
 

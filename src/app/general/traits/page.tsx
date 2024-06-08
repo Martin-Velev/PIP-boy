@@ -1,5 +1,5 @@
 'use client'
-import TraitsComponent from '@/app/char/create/traits/TraitsComponent'
+import TraitsComponent from '@/app/components/TraitsComponent'
 import { CharContext } from '@/app/providers/CharProvider'
 import React, { useContext } from 'react'
 

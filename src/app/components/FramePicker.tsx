@@ -1,3 +1,4 @@
+'use client'
 import { CharProps } from '@/app/common/props'
 import { FRAMES, Frame, STAT_PER_FRAME } from '@/app/rules/frames'
 import { Stat } from '@/app/types/stat'

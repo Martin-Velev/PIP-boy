@@ -1,7 +1,6 @@
 'use client'
 import React, { FC, useEffect, useState } from 'react'
 import { Stat } from '@customTypes/stat'
-import { Char } from '../../../types/char'
 import { CharProps } from '@/app/common/props'
 import { MIN_STAT, MAX_STAT } from '@/app/rules/defaults'
 
@@ -80,6 +79,3 @@ const SpecialStatsComponent: FC<CharProps> = ({ char, setChar }) => {
 }
 
 export default SpecialStatsComponent
-function calculateStatMods(char: Char) {
-	throw new Error('Function not implemented.')
-}

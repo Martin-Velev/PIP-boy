@@ -1,6 +1,6 @@
 'use client'
 import React, { FC, useEffect, useState } from 'react'
-import TableComponent from '../../../common/TableComponent'
+import TableComponent from '../common/TableComponent'
 import { CharProps } from '@/app/common/props'
 import PerkComponent from '@/app/common/PerkComponent'
 import { Perk } from '@/app/types/perk'

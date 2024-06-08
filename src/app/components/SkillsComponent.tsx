@@ -1,14 +1,9 @@
 'use client'
 import { FC, useEffect, useState } from 'react'
-import { Char } from '../../../types/char'
-import {
-	STARTING_SKILL_POINTS,
-	SKILL_MOD_BOILERPLATE,
-	MIN_SKILL,
-	MAX_SKILL,
-} from '@/app/rules/defaults'
+import { SKILL_MOD_BOILERPLATE, MIN_SKILL, MAX_SKILL } from '@/app/rules/defaults'
 import { calculateSkillMods } from '@/app/rules/skills'
 import { Skills, Skill, SkillName } from '@/app/types/skills'
+import { Char } from '@/app/types/char'
 
 interface StatsComponentProps {
 	char: Char
@@ -16,7 +11,6 @@ interface StatsComponentProps {
 }
 
 const SkillsComponent: FC<StatsComponentProps> = ({ char, setChar }) => {
-	// const [availablePoints, setAvailablePoints] = useState(STARTING_SKILL_POINTS)
 	const [skillMods, setSkillMods] = useState<Skills>(SKILL_MOD_BOILERPLATE)
 	const skills: Skill[] = Object.keys(char.skills) as Skill[]
 
@@ -89,7 +83,10 @@ const SkillsComponent: FC<StatsComponentProps> = ({ char, setChar }) => {
 
 	return (
 		<>
-			<div id='skills' className='w-full items-center flex flex-col justify-center justify-between text-2xl columns-1'>
+			<div
+				id='skills'
+				className='w-full items-center flex flex-col justify-center justify-between text-2xl columns-1'
+			>
 				<div className='flex flex-row w-full p-10'>
 					<div className='w-1/2 flex flex-col'>
 						<div>
