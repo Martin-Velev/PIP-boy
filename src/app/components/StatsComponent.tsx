@@ -11,31 +11,39 @@ const SpecialStatsComponent: FC<CharProps> = ({ char, setChar }) => {
 	const stats: Stat[] = Object.keys(char.stats) as Stat[]
 	const statList = stats.map((stat: Stat) => {
 		const incrementStat = (increment: -1 | 1) => {
+			console.log('char', char)
+			console.log('setChar', setChar)
 			// No points available
-			const inssuficientPoints = increment === 1 && availableStatPoints === 0
+			const inssuficientPoints =
+				increment === 1 && availableStatPoints === 0
 			// Can't reduce stat below 1
-			const statUnderflow = increment === -1 && char.stats[stat] === MIN_STAT
+			const statUnderflow =
+				increment === -1 && char.stats[stat] === MIN_STAT
 			// Can't increase stat above 10
-			const statOverflow = increment === 1 && char.stats[stat] === MAX_STAT
+			const statOverflow =
+				increment === 1 && char.stats[stat] === MAX_STAT
 			if (inssuficientPoints || statUnderflow || statOverflow) {
 				return
 			}
 
 			const newAvailableStatPoints = char.availableStatPoints - increment
-			console.log(increment)
-			console.log(newAvailableStatPoints)
 			// Update points
 
 			// Update char
 			let newStats = { ...char.stats }
 			newStats[stat] = newStats[stat] + increment
-			setChar({ ...char, availableStatPoints: newAvailableStatPoints, stats: newStats })
+			setChar({
+				...char,
+				availableStatPoints: newAvailableStatPoints,
+				stats: newStats,
+			})
 
 			// Mod skills
 		}
 
 		let mod = 0
-		const relevantModifiers: { [key: string]: number } = char.statMods[stat as Stat]
+		const relevantModifiers: { [key: string]: number } =
+			char.statMods[stat as Stat]
 		if (Object.keys(relevantModifiers).length > 0) {
 			console.log('keys', Object.keys(relevantModifiers))
 
@@ -52,7 +60,9 @@ const SpecialStatsComponent: FC<CharProps> = ({ char, setChar }) => {
 				<button className='w-1/6' onClick={(e) => incrementStat(-1)}>
 					-
 				</button>
-				<div className='w-1/6 text-center'>{char.stats[stat] + mod} </div>
+				<div className='w-1/6 text-center'>
+					{char.stats[stat] + mod}{' '}
+				</div>
 				<button className='w-1/6' onClick={(e) => incrementStat(1)}>
 					+
 				</button>

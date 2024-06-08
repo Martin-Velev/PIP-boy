@@ -1,10 +1,11 @@
 'use client'
-import { CharProps } from '@/app/common/props'
 import { FRAMES, Frame, STAT_PER_FRAME } from '@/app/rules/frames'
+import { CharProps } from '@/app/types/props'
 import { Stat } from '@/app/types/stat'
 import React, { FC } from 'react'
 
 const FramePicker: FC<CharProps> = ({ char, setChar }) => {
+	console.log('frame char', char)
 	const handleFrameChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
 		const frame = event.target.value as Frame
 		const newChar = { ...char, frame }
@@ -23,7 +24,11 @@ const FramePicker: FC<CharProps> = ({ char, setChar }) => {
 	return (
 		<div>
 			<label htmlFor='frame'>Select Frame:</label>
-			<select id='frame-picker' value={char.frame} onChange={handleFrameChange}>
+			<select
+				id='frame-picker'
+				value={char.frame}
+				onChange={handleFrameChange}
+			>
 				{FRAMES.map((frame) => (
 					<option key={frame} value={frame}>
 						{frame}

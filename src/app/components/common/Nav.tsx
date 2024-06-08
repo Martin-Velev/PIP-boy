@@ -15,7 +15,8 @@ type NavProps = {
 const Nav: React.FC<NavProps> = ({ routes, h = NAV_HEIGHT, offset = 0 }) => {
 	const navClass = `bottom-${offset} absolute w-full h-${h}`
 	return (
-		<nav className={navClass}>
+		// TODO: class fucks up until you add it manually. WTF?
+		<nav className={navClass + 'bottom-0'}>
 			<ul className='flex flex-row w-full justify-center'>
 				{routes.map((route) => (
 					<li key={route.path} className='flex flex-row mx-12'>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import RootNav from '@/app/components/nav/rootNav'
+import { CharProvider } from '@/app/providers/CharProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,16 +19,20 @@ export const metadata: Metadata = {
 	],
 }
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+	children,
+}: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang='en'>
 			<head>
 				<link rel='icon' href='/vault-tec.svg' sizes='96x96' />
 			</head>
 			<body className={inter.className + 'h-full w-full'}>
-				<div id="app-container" className='h-screen'>
-					{children}
-					<RootNav />
+				<div id='app-container' className='h-screen'>
+					<CharProvider>
+						{children}
+						<RootNav />
+					</CharProvider>
 				</div>
 			</body>
 		</html>
