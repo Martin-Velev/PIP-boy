@@ -83,7 +83,7 @@ export const DEFAULT_HUMAN: Char = {
 	taggedSkills: [] as Skill[],
 	availableTags: DEFAULT_TAGS,
 
-	availableStatPoints: STARTING_STAT_POINTS + 4, // Humans get 4 stat points
+	availableStatPoints: STARTING_STAT_POINTS + 4, // Humans get 4 stat points and human is the default race
 	availableSkillPoints: STARTING_SKILL_POINTS,
 
 	traits: [] as Trait[],

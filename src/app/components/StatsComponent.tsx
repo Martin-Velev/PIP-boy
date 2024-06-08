@@ -6,7 +6,6 @@ import { CharProps } from '@/app/types/props'
 
 const SpecialStatsComponent: FC<CharProps> = ({ char, setChar }) => {
 	const { availableStatPoints } = char
-	const [statMods, setStatMods] = useState<{ [key: string]: number }>({})
 
 	const stats: Stat[] = Object.keys(char.stats) as Stat[]
 	const statList = stats.map((stat: Stat) => {
