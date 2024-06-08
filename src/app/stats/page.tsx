@@ -1,7 +1,9 @@
-import React, { FC } from 'react'
+'use client'
+import { redirect } from 'next/navigation'
+import { FC } from 'react'
 
 const Page: FC = () => {
-	return <div></div>
+	redirect('/stats/special')
 }
 
 export default Page

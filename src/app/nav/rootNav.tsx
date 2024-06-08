@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 const RootNav = () => {
 	const routes = [
+		{ path: '/general', label: 'GENERAL' },
 		{ path: '/stats', label: 'STATS' },
 		{ path: '/items', label: 'ITEMS' },
 		{ path: '/data', label: 'DATA' },

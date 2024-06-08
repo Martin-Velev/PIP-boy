@@ -17,38 +17,36 @@ const BackgroundPicker: FC<CharProps> = ({ char, setChar }) => {
 	}
 
 	return (
-		<>
-			<div className='w-full flex flex-row'>
-				<div className='w-1/2'>
-					<select
-						value={selectedBackground.name}
-						onChange={onBackgroundChange}
-						className='w-full'
-					>
-						<option value=''>Select a background</option>
-						{backgrounds.map((background) => (
-							<option key={background.name} value={background.name}>
-								{background.name}
-							</option>
-						))}
-					</select>
-				</div>
+		<div id='background' className='w-full flex flex-row'>
+			<div className='w-1/2'>
+				<select
+					value={selectedBackground.name}
+					onChange={onBackgroundChange}
+					className='w-full'
+				>
+					<option value=''>Select a background</option>
+					{backgrounds.map((background) => (
+						<option key={background.name} value={background.name}>
+							{background.name}
+						</option>
+					))}
+				</select>
+			</div>
 
-				<div className='w-1/2'>
-					<h3>Description</h3>
+			<div className='w-1/2 overflow-scroll' style={{ maxHeight: '80vh' }}>
+				<h3>Description</h3>
 
-					<div>
-						<>
-							<div>
-								{selectedBackground.description.split('\n').map((line, i) => (
-									<p key={`desc-${i}`}>{line}</p>
-								))}
-							</div>
-						</>
-					</div>
+				<div>
+					<>
+						<div>
+							{selectedBackground.description.split('\n').map((line, i) => (
+								<p key={`desc-${i}`}>{line}</p>
+							))}
+						</div>
+					</>
 				</div>
 			</div>
-		</>
+		</div>
 	)
 }
 

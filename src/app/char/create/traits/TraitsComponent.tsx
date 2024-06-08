@@ -54,13 +54,13 @@ const TraitsComponent: React.FC<CharProps> = ({ char, setChar }) => {
 	}
 
 	return (
-		<>
+		<div id='traits' className='overflow-scroll'>
 			<div className='w-full text-center text-6xl'>
 				<h1>Traits</h1>
 				<h4 className='text-4xl'>(select 2)</h4>
 			</div>
 
-			<ul>
+			<ul className='overflow-scroll' style={{ maxHeight: '80vh' }}>
 				{traits.map((trait: Trait) => (
 					<li key={trait.name} className='flex flex-row my-8'>
 						<input
@@ -75,7 +75,7 @@ const TraitsComponent: React.FC<CharProps> = ({ char, setChar }) => {
 					</li>
 				))}
 			</ul>
-		</>
+		</div>
 	)
 }
 

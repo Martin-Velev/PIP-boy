@@ -89,7 +89,7 @@ const SkillsComponent: FC<StatsComponentProps> = ({ char, setChar }) => {
 
 	return (
 		<>
-			<div className='w-full items-center flex flex-col justify-center justify-between text-2xl columns-1'>
+			<div id='skills' className='w-full items-center flex flex-col justify-center justify-between text-2xl columns-1'>
 				<div className='flex flex-row w-full p-10'>
 					<div className='w-1/2 flex flex-col'>
 						<div>

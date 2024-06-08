@@ -50,11 +50,11 @@ const PerksComponent: FC<CharProps> = ({ char, setChar }) => {
 	}
 
 	return (
-		<div className='flex flex-col'>
+		<div id='perks' className='flex flex-col max-h-screen'>
 			<h2>Available Perks: {char.availablePerks}</h2>
 			<div className='w-full flex flex-row'>
 				<div className='w-1/2'>
-					<ul>
+					<ul className='overflow-scroll' style={{ maxHeight: '80vh' }}>
 						{perks.sort(levelSorter).map((perk: any) => (
 							<li
 								key={perk.name}

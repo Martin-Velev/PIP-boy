@@ -25,8 +25,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 				<link rel='icon' href='/vault-tec.svg' sizes='96x96' />
 			</head>
 			<body className={inter.className + 'h-full w-full'}>
-				{children}
-				<RootNav />
+				<div id="app-container" className='h-screen'>
+					{children}
+					<RootNav />
+				</div>
 			</body>
 		</html>
 	)

@@ -14,7 +14,6 @@ type NavProps = {
 
 const Nav: React.FC<NavProps> = ({ routes, h = NAV_HEIGHT, offset = 0 }) => {
 	const navClass = `bottom-${offset} absolute w-full h-${h}`
-	console.log('nav', navClass)
 	return (
 		<nav className={navClass}>
 			<ul className='flex flex-row w-full justify-center'>
