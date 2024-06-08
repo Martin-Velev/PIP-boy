@@ -17,37 +17,25 @@ const SkillsComponent: FC<StatsComponentProps> = ({ char, setChar }) => {
 	function tagSkill(skill: Skill) {
 		// Check if skill has been tagged
 		const index = char.taggedSkills.indexOf(skill)
+		let newChar = { ...char }
 		const isSkillTagged = index > -1
 		if (!isSkillTagged && char.availableTags > 0) {
 			// Tag skill
-			setChar({ ...char, availableTags: char.availableTags - 1 })
-			char.taggedSkills.push(skill)
+			newChar.taggedSkills.push(skill)
+			newChar = { ...newChar, availableTags: char.availableTags - 1 }
 		}
 		if (isSkillTagged) {
 			// Untag skill
-			setChar({ ...char, availableTags: char.availableTags + 1 })
-			char.taggedSkills.splice(index, 1)
+			newChar.taggedSkills.splice(index, 1)
+			newChar = { ...newChar, availableTags: char.availableTags + 1 }
 		}
-
-		updateCharSkills(skill)
+		setChar(newChar)
 	}
 
 	useEffect(() => {
 		const newSkillMods = calculateSkillMods(char)
 		setSkillMods(newSkillMods)
 	}, [char])
-
-	const updateCharSkills = (skill: Skill, increment: -1 | 1 | 0 = 0) => {
-		let newSkills = { ...char.skills }
-		newSkills[skill] = newSkills[skill] + increment
-		console.log('new skills', newSkills)
-		const newChar = {
-			...char,
-			availablePoints: char.availableSkillPoints - increment,
-		}
-		setChar(newChar)
-		// setAvailablePoints(availableSkillPoints - increment)
-	}
 
 	const incrementSkill = (char: Char, skill: Skill, increment: -1 | 1) => {
 		// No points available
@@ -60,7 +48,9 @@ const SkillsComponent: FC<StatsComponentProps> = ({ char, setChar }) => {
 			return
 		}
 
-		updateCharSkills(skill, increment)
+		let skills = { ...char.skills }
+		skills[skill] = skills[skill] + increment
+		setChar({ ...char, skills, availableSkillPoints: char.availableSkillPoints - increment })
 	}
 	const skillList = skills.map((skill: Skill) => {
 		return (

@@ -1,12 +1,5 @@
 'use client'
-import {
-	createContext,
-	useState,
-	FC,
-	PropsWithChildren,
-	Dispatch,
-	SetStateAction,
-} from 'react'
+import { createContext, useState, FC, PropsWithChildren, Dispatch, SetStateAction } from 'react'
 import { Char } from '../types/char'
 import { DEFAULT_HUMAN } from '../rules/defaults'
 
@@ -26,9 +19,5 @@ export const CharContext = createContext<CharacterContextType>({
 export const CharProvider: FC<PropsWithChildren> = ({ children }) => {
 	const [char, setChar] = useState(DEFAULT_HUMAN)
 
-	return (
-		<CharContext.Provider value={{ char, setChar }}>
-			{children}
-		</CharContext.Provider>
-	)
+	return <CharContext.Provider value={{ char, setChar }}>{children}</CharContext.Provider>
 }
