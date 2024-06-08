@@ -1,5 +1,5 @@
 'use client'
-import StatsComponent from './create/stats/StatsComponent'
+import SpecialStatsComponent from './create/stats/StatsComponent'
 import SkillsComponent from './create/stats/SkillsComponent'
 import { CharContext, CharProvider } from '../providers/CharProvider'
 import { FC, PropsWithChildren, useContext } from 'react'
@@ -42,7 +42,7 @@ const CharComponent: FC<CharProps> = ({ char, setChar }) => {
 				
 				<div className='flex flex-row w-full'>
 					<div className='w-1/2'>
-						<StatsComponent char={char} setChar={setChar} />
+						<SpecialStatsComponent char={char} setChar={setChar} />
 					</div>
 					<div className='w-1/2'>
 						<SkillsComponent char={char} setChar={setChar} />

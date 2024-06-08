@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Nav from './common/Nav'
-import { CharProvider } from './providers/CharProvider'
+import RootNav from '@/app/nav/rootNav'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,9 +26,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 			</head>
 			<body className={inter.className + 'h-full w-full'}>
 				{children}
-				<div className='bottom-0 left-auto w-full h-full'>
-					<Nav />
-				</div>
+				<RootNav />
 			</body>
 		</html>
 	)

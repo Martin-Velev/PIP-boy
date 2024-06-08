@@ -1,3 +1,1 @@
-import { Char } from './types/char'
-import { Skill } from './types/skills'
-import { Trait } from './types/traits'
+export const NAV_HEIGHT = 10

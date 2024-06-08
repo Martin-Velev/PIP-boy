@@ -1,19 +1,28 @@
+import { NAV_HEIGHT } from '@/app/constants'
 import Link from 'next/link'
-import React from 'react'
 
-const Nav: React.FC = () => {
+type Route = {
+	path: string
+	label: string
+}
+
+type NavProps = {
+	routes: Route[]
+	offset?: number
+	h?: number
+}
+
+const Nav: React.FC<NavProps> = ({ routes, h = NAV_HEIGHT, offset = 0 }) => {
+	const navClass = `bottom-${offset} absolute w-full h-${h}`
+	console.log('nav', navClass)
 	return (
-		<nav>
-			<ul className='text-4xl mb-12 flex flex-row w-full justify-center'>
-				<li className='mx-32'>
-					<Link href='/char'>Char</Link>
-				</li>
-				{/* <li className='mx-32'>
-					<Link href='/char/stats'>Stats</Link>
-				</li>
-				<li className='mx-32'>
-					<Link href='/char/traits'>Traits</Link>
-				</li> */}
+		<nav className={navClass}>
+			<ul className='flex flex-row w-full justify-center'>
+				{routes.map((route) => (
+					<li key={route.path} className='flex flex-row mx-12'>
+						<Link href={route.path}> {route.label} </Link>
+					</li>
+				))}
 			</ul>
 		</nav>
 	)

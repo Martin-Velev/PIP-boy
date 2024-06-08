@@ -11,13 +11,10 @@ const FramePicker: FC<CharProps> = ({ char, setChar }) => {
 			newChar.statMods[stat as Stat].frame = 0
 		}
 		const statModsMap: { [key: string]: number } = STAT_PER_FRAME[frame] // Add index signature
-		console.log('stat mod map', statModsMap)
 		for (let relevantStat in statModsMap) {
-			console.log('relevant stat', relevantStat)
 			const newMod = statModsMap[relevantStat as Stat]
 			newChar.statMods[relevantStat as Stat].frame = newMod
 		}
-		console.log('new mods on char', newChar.statMods)
 
 		setChar(newChar)
 	}

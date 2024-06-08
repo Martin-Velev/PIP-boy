@@ -2,7 +2,7 @@
 import { NextPage } from 'next'
 import CharComponent from '../../CharComponent'
 import { CharContext, CharProvider } from '@/app/providers/CharProvider'
-import StatsComponent from './StatsComponent'
+import SpecialStatsComponent from './StatsComponent'
 import SkillsComponent from './SkillsComponent'
 import { useContext } from 'react'
 import Link from 'next/link'
@@ -13,7 +13,7 @@ const Page: NextPage = () => {
 		<>
 			<div className='flex flex-row w-full'>
 				<div className='w-1/2'>
-					<StatsComponent char={char} setChar={setChar} />
+					<SpecialStatsComponent char={char} setChar={setChar} />
 				</div>
 				<div className='w-1/2'>
 					<SkillsComponent char={char} setChar={setChar} />

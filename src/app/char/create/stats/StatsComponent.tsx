@@ -5,7 +5,7 @@ import { Char } from '../../../types/char'
 import { CharProps } from '@/app/common/props'
 import { MIN_STAT, MAX_STAT } from '@/app/rules/defaults'
 
-const StatsComponent: FC<CharProps> = ({ char, setChar }) => {
+const SpecialStatsComponent: FC<CharProps> = ({ char, setChar }) => {
 	const { availableStatPoints } = char
 	const [statMods, setStatMods] = useState<{ [key: string]: number }>({})
 
@@ -79,7 +79,7 @@ const StatsComponent: FC<CharProps> = ({ char, setChar }) => {
 	)
 }
 
-export default StatsComponent
+export default SpecialStatsComponent
 function calculateStatMods(char: Char) {
 	throw new Error('Function not implemented.')
 }
