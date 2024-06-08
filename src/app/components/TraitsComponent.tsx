@@ -1,8 +1,8 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { Trait } from '@/app/types/traits'
-import { CharProps } from '@/app/common/props'
 import TraitComponent from '@/app/components/TraitComponent'
+import { CharProps } from '@/app/types/props'
 
 const TraitsComponent: React.FC<CharProps> = ({ char, setChar }) => {
 	const [traits, setTraits] = useState([])

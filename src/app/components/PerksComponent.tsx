@@ -1,9 +1,7 @@
 'use client'
 import React, { FC, useEffect, useState } from 'react'
-import TableComponent from '../common/TableComponent'
-import { CharProps } from '@/app/common/props'
-import PerkComponent from '@/app/common/PerkComponent'
 import { Perk } from '@/app/types/perk'
+import { CharProps } from '@/app/types/props'
 
 const levelSorter = (a: Perk, b: Perk) => a.level - b.level
 

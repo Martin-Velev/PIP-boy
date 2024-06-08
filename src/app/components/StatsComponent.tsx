@@ -1,8 +1,8 @@
 'use client'
 import React, { FC, useEffect, useState } from 'react'
 import { Stat } from '@customTypes/stat'
-import { CharProps } from '@/app/common/props'
 import { MIN_STAT, MAX_STAT } from '@/app/rules/defaults'
+import { CharProps } from '@/app/types/props'
 
 const SpecialStatsComponent: FC<CharProps> = ({ char, setChar }) => {
 	const { availableStatPoints } = char

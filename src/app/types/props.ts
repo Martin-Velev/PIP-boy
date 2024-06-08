@@ -1,4 +1,4 @@
-import { Char } from '../types/char'
+import { Char } from './char'
 
 export interface CharProps {
     char: Char

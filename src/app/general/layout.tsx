@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react'
-import StatNav from '@/app/nav/statNav'
-import GeneralNav from '@/app/nav/generalNav'
+import StatNav from '@/app/components/nav/statNav'
+import GeneralNav from '@/app/components/nav/generalNav'
 
 const Layout: FC<{ children: ReactNode }> = ({ children }) => {
 	return (
