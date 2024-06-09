@@ -21,7 +21,6 @@
       "@/*": ["./src/*"],
       "@app/*": ["./src/app/*"],
       "@components/*": ["./src/components/*"],
-      "@common/*": ["./src/common/*"],
       "@files/*": ["./src/files/*"],
       "@public/*": ["./public/*"],
       "@root/*": ["."]
