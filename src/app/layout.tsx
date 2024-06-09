@@ -2,7 +2,9 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import RootNav from '@/app/components/nav/rootNav'
-import { CharProvider } from '@/app/providers/CharProvider'
+import { CharContext, CharProvider } from '@/app/providers/CharProvider'
+import { useContext } from 'react'
+import CharManager from '@/app/components/CharManager'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,9 +21,7 @@ export const metadata: Metadata = {
 	],
 }
 
-export default function RootLayout({
-	children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang='en'>
 			<head>
@@ -32,6 +32,8 @@ export default function RootLayout({
 					<CharProvider>
 						{children}
 						<RootNav />
+
+						<CharManager />
 					</CharProvider>
 				</div>
 			</body>

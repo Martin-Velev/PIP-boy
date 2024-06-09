@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import { Char } from '../types/char'
 import { validateChar } from '@/utils'
+import uploadIcon from '../../../../public/icons/upload.svg'
+import { Char } from '@/app/types/char'
+import Image from 'next/image'
 
 const LoadChar: React.FC<{ setChar: (char: Char) => void }> = ({ setChar }) => {
 	const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,7 +31,10 @@ const LoadChar: React.FC<{ setChar: (char: Char) => void }> = ({ setChar }) => {
 
 	return (
 		<div>
-			<input type='file' accept='.json' onChange={handleFileChange} />
+			<div className='flex flex-row'>
+				<Image style={{ filter: 'invert(1)' }} src={uploadIcon} alt='upload' />
+				<input type='file' accept='.json' onChange={handleFileChange} />
+			</div>
 		</div>
 	)
 }
