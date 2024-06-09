@@ -20,6 +20,7 @@ const BackgroundPicker: FC<CharProps> = ({ char, setChar }) => {
 				<ul className='w-1/2' style={{ maxWidth: '80vh' }}>
 					{backgrounds.map((background) => (
 						<li
+							key={background.name}
 							className={`${
 								char.background.name === background.name ? 'border-2' : ''
 							} `}

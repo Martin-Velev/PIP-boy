@@ -1,5 +1,5 @@
-import { CharProps } from '@/app/common/props'
 import { levelUp } from '@/app/rules/levelUp'
+import { CharProps } from '@/app/types/props'
 import React, { FC } from 'react'
 
 const LevelUpButton: FC<CharProps> = ({ char, setChar }) => {

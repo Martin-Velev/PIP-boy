@@ -1,10 +1,10 @@
 import { Stat } from '@/app/types/stat'
 import { Background } from '../rules/backgrounds'
 import { Frame } from '../rules/frames'
-import { Race } from '../rules/races'
 import { Perk } from './perk'
 import { Skill } from './skills'
 import { Trait } from './traits'
+import { Race } from '@/app/rules/races'
 
 export type Char = {
 	name: string
