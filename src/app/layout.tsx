@@ -1,6 +1,6 @@
 import CharManager from '@/components/common/CharManager'
 import Header from '@/components/common/Header'
-import RootNav from '@/components/nav/rootNav'
+import RootNav from '@/app/rootNav'
 import { CharProvider } from '@/providers/CharProvider'
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'

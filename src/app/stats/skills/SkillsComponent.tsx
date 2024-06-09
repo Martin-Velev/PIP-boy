@@ -1,5 +1,4 @@
 'use client'
-
 import { SKILL_MOD_BOILERPLATE, MIN_SKILL, MAX_SKILL } from '@/rules/defaults'
 import { calculateSkillMods } from '@/rules/skills'
 import { Char } from '@/types/char'
