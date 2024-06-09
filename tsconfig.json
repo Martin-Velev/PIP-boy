@@ -20,11 +20,13 @@
     "paths": {
       "@/*": ["./src/*"],
       "@app/*": ["./src/app/*"],
-      "@customTypes/*": ["./src/app/types/*"],
+      "@components/*": ["./src/components/*"],
+      "@common/*": ["./src/common/*"],
       "@files/*": ["./src/files/*"],
+      "@public/*": ["./public/*"],
       "@root/*": ["."]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "/public"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "bin"]
 }

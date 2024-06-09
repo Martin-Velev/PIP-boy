@@ -1,7 +1,8 @@
 'use client'
-import PerksComponent from '@/app/components/char/PerksComponent'
-import { CharContext } from '@/app/providers/CharProvider'
-import React, { FC, useContext } from 'react'
+
+import PerksComponent from '@/app/stats/perks/PerksComponent'
+import { CharContext } from '@/providers/CharProvider'
+import { FC, useContext } from 'react'
 
 const Page: FC = () => {
 	const { char, setChar } = useContext(CharContext)

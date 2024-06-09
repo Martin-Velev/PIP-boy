@@ -1,7 +1,8 @@
 'use client'
-import SkillsComponent from '@/app/components/char/SkillsComponent'
-import { CharContext } from '@/app/providers/CharProvider'
-import React, { FC, useContext } from 'react'
+
+import SkillsComponent from '@/app/stats/skills/SkillsComponent'
+import { CharContext } from '@/providers/CharProvider'
+import { FC, useContext } from 'react'
 
 const Page: FC = () => {
 	const { char, setChar } = useContext(CharContext)

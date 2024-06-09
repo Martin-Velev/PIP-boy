@@ -1,7 +1,8 @@
 'use client'
-import SpecialStatsComponent from '@/app/components/char/StatsComponent'
-import { CharContext } from '@/app/providers/CharProvider'
-import React, { FC, useContext } from 'react'
+
+import SpecialStatsComponent from '@/app/stats/special/StatsComponent'
+import { CharContext } from '@/providers/CharProvider'
+import { FC, useContext } from 'react'
 
 const Page: FC = () => {
 	const { char, setChar } = useContext(CharContext)

@@ -1,10 +1,9 @@
-import type { Metadata } from 'next'
+import CharManager from '@/components/common/CharManager'
+import Header from '@/components/common/Header'
+import RootNav from '@/components/nav/rootNav'
+import { CharProvider } from '@/providers/CharProvider'
+import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
-import { CharProvider } from '@/app/providers/CharProvider'
-import Header from '@/app/components/common/Header'
-import CharManager from '@/app/components/common/CharManager'
-import RootNav from '@/app/components/nav/rootNav'
 
 const inter = Inter({ subsets: ['latin'] })
 

@@ -1,5 +1,5 @@
-import { Char } from './app/types/char'
-import { Perk } from './app/types/perk'
+import { Char } from './types/char'
+import { Perk } from './types/perk'
 
 export function extractTable(csvFile: string, columns: number): string[][] {
 	// Special function to extract a table from a CSV file with extra commas inside

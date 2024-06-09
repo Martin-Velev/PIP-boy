@@ -1,7 +1,8 @@
 'use client'
-import BackgroundPicker from '@/app/components/char/BackgroundPicker'
-import { CharContext } from '@/app/providers/CharProvider'
-import React, { FC, useContext } from 'react'
+
+import BackgroundPicker from '@/app/general/background/BackgroundPicker'
+import { CharContext } from '@/providers/CharProvider'
+import { FC, useContext } from 'react'
 
 const Page: FC = () => {
 	const { char, setChar } = useContext(CharContext)

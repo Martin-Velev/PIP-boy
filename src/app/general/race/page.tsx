@@ -1,8 +1,9 @@
 
 'use client'
-import RacePicker from '@/app/components/char/RacePicker'
-import { CharContext } from '@/app/providers/CharProvider'
-import React, { FC, useContext } from 'react'
+
+import RacePicker from '@/app/general/race/RacePicker'
+import { CharContext } from '@/providers/CharProvider'
+import { FC, useContext } from 'react'
 
 const Page: FC = () => {
 	const { char, setChar } = useContext(CharContext)

@@ -1,6 +1,6 @@
 import path from 'path'
 import fs from 'fs'
-import { Trait } from '@/app/types/traits'
+import { Trait } from '@/types/traits'
 
 export function GET(req: Request) {
 	const filePath = path.join(process.cwd(), 'data/traits.txt')

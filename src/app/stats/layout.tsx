@@ -1,6 +1,5 @@
-import React, { FC, ReactNode } from 'react'
-import StatNav from '@/app/components/nav/statNav'
-import { CharProvider } from '@/app/providers/CharProvider'
+import StatNav from '@/components/nav/statNav'
+import { FC, ReactNode } from 'react'
 
 const Layout: FC<{ children: ReactNode }> = ({ children }) => {
 	return (
