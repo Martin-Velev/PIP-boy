@@ -1,11 +1,10 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import RootNav from '@/app/components/nav/rootNav'
-import { CharContext, CharProvider } from '@/app/providers/CharProvider'
-import { useContext } from 'react'
-import CharManager from '@/app/components/CharManager'
+import { CharProvider } from '@/app/providers/CharProvider'
 import Header from '@/app/components/common/Header'
+import CharManager from '@/app/components/common/CharManager'
+import RootNav from '@/app/components/nav/rootNav'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -35,7 +34,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 						{children}
 						<RootNav />
 
-						<div className='absolute bottom-10 right-0'>
+						<div className='absolute bottom-10 left-0'>
 							<CharManager />
 						</div>
 					</CharProvider>

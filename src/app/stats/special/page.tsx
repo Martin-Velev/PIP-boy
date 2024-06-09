@@ -1,5 +1,5 @@
 'use client'
-import SpecialStatsComponent from '@/app/components/StatsComponent'
+import SpecialStatsComponent from '@/app/components/char/StatsComponent'
 import { CharContext } from '@/app/providers/CharProvider'
 import React, { FC, useContext } from 'react'
 

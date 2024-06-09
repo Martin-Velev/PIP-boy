@@ -1,5 +1,5 @@
 'use client'
-import SkillsComponent from '@/app/components/SkillsComponent'
+import SkillsComponent from '@/app/components/char/SkillsComponent'
 import { CharContext } from '@/app/providers/CharProvider'
 import React, { FC, useContext } from 'react'
 

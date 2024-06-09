@@ -18,16 +18,17 @@ const SkillsComponent: FC<StatsComponentProps> = ({ char, setChar }) => {
 		// Check if skill has been tagged
 		const index = char.taggedSkills.indexOf(skill)
 		let newChar = { ...char }
+		let taggedSkills = [...char.taggedSkills]
 		const isSkillTagged = index > -1
 		if (!isSkillTagged && char.availableTags > 0) {
 			// Tag skill
-			newChar.taggedSkills.push(skill)
-			newChar = { ...newChar, availableTags: char.availableTags - 1 }
+			taggedSkills.push(skill)
+			newChar = { ...newChar, availableTags: char.availableTags - 1, taggedSkills }
 		}
 		if (isSkillTagged) {
 			// Untag skill
-			newChar.taggedSkills.splice(index, 1)
-			newChar = { ...newChar, availableTags: char.availableTags + 1 }
+			taggedSkills.splice(index, 1)
+			newChar = { ...newChar, availableTags: char.availableTags + 1, taggedSkills }
 		}
 		setChar(newChar)
 	}
@@ -53,6 +54,7 @@ const SkillsComponent: FC<StatsComponentProps> = ({ char, setChar }) => {
 		setChar({ ...char, skills, availableSkillPoints: char.availableSkillPoints - increment })
 	}
 	const skillList = skills.map((skill: Skill) => {
+		console.log('tagged', char.taggedSkills)
 		return (
 			<li key={`skill-${skill}`} className='flex flex-row hover:border p-1'>
 				<div className='w-1/12'>{char.taggedSkills.includes(skill) ? '□' : ''}</div>
@@ -77,7 +79,7 @@ const SkillsComponent: FC<StatsComponentProps> = ({ char, setChar }) => {
 				id='skills'
 				className='w-full items-center flex flex-col justify-center justify-between text-2xl columns-1'
 			>
-				<div className='flex flex-row w-full p-10'>
+				<div className='flex flex-row w-full px-10 pt-10 justify-center text-center'>
 					<div className='w-1/2 flex flex-col'>
 						<div>
 							<label className='mr-5'>Available Points</label>

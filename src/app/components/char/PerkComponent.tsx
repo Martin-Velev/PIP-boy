@@ -1,5 +1,5 @@
 import React from 'react'
-import { Perk } from '../types/perk'
+import { Perk } from '../../types/perk'
 
 interface PerkComponentProps {
 	perk: Perk

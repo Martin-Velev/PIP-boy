@@ -1,6 +1,6 @@
 
 'use client'
-import RacePicker from '@/app/components/RacePicker'
+import RacePicker from '@/app/components/char/RacePicker'
 import { CharContext } from '@/app/providers/CharProvider'
 import React, { FC, useContext } from 'react'
 

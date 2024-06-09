@@ -1,4 +1,4 @@
-import Nav from '@/app/components/common/Nav'
+import Nav from '@/app/components/nav/Nav'
 import { NAV_HEIGHT } from '@/app/constants'
 import React from 'react'
 

@@ -1,5 +1,5 @@
 'use client'
-import FramePicker from '@/app/components/FramePicker'
+import FramePicker from '@/app/components/char/FramePicker'
 import { CharContext } from '@/app/providers/CharProvider'
 import React, { FC, useContext } from 'react'
 

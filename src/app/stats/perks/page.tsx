@@ -1,5 +1,5 @@
 'use client'
-import PerksComponent from '@/app/components/PerksComponent'
+import PerksComponent from '@/app/components/char/PerksComponent'
 import { CharContext } from '@/app/providers/CharProvider'
 import React, { FC, useContext } from 'react'
 

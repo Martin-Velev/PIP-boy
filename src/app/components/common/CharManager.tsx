@@ -9,7 +9,6 @@ const CharManager: React.FC = () => {
 	if (!char) return null
 	return (
 		<div>
-			Current character: {char.name ? char.name : 'blank'}
 			<LoadChar setChar={setChar} />
 			<SaveChar char={char} />
 		</div>

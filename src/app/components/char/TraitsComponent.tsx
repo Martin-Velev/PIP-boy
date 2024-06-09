@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { Trait } from '@/app/types/traits'
-import TraitComponent from '@/app/components/TraitComponent'
+import TraitComponent from '@/app/components/char/TraitComponent'
 import { CharProps } from '@/app/types/props'
 
 const TraitsComponent: React.FC<CharProps> = ({ char, setChar }) => {
@@ -60,7 +60,7 @@ const TraitsComponent: React.FC<CharProps> = ({ char, setChar }) => {
 				<h4 className='text-4xl'>(select 2)</h4>
 			</div>
 
-			<ul className='overflow-scroll' style={{ maxHeight: '80vh' }}>
+			<ul className='overflow-scroll' style={{ maxHeight: '70vh' }}>
 				{traits.map((trait: Trait) => (
 					<li key={trait.name} className='flex flex-row my-8'>
 						<input

@@ -5,7 +5,7 @@ import React from 'react'
 const Header: React.FC = () => {
 	const { char, setChar } = React.useContext(CharContext)
 	return (
-		<div className='fex flex-row w-full text-4xl text-center'>
+		<div className='flex w-full justify-center flex-row w-full text-4xl text-center'>
 			<h1>Name:</h1>
 
 			<input
