@@ -1,3 +1,4 @@
+import { Stat } from '@/app/types/stat'
 import { Background } from '../rules/backgrounds'
 import { Frame } from '../rules/frames'
 import { Race } from '../rules/races'
@@ -58,4 +59,10 @@ export type Char = {
 
 	perks: Perk[]
 	availablePerks: number
+}
+
+export function getStat(char: Char, stat: Stat): number {
+	const relevantMods = char.statMods[stat]
+	const totalModifier = Object.values(relevantMods).reduce((acc, mod) => acc + mod, 0)
+	return char.stats[stat] + totalModifier
 }

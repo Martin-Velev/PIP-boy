@@ -5,6 +5,7 @@ import RootNav from '@/app/components/nav/rootNav'
 import { CharContext, CharProvider } from '@/app/providers/CharProvider'
 import { useContext } from 'react'
 import CharManager from '@/app/components/CharManager'
+import Header from '@/app/components/common/Header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,10 +31,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 			<body className={inter.className + 'h-full w-full'}>
 				<div id='app-container' className='h-screen'>
 					<CharProvider>
+						<Header />
 						{children}
 						<RootNav />
 
-						<CharManager />
+						<div className='absolute bottom-10 right-0'>
+							<CharManager />
+						</div>
 					</CharProvider>
 				</div>
 			</body>
