@@ -1,7 +1,7 @@
 'use client'
 
-import LoadChar from '@/components/common/LoadChar'
-import SaveChar from '@/components/common/SaveChar'
+import LoadChar from '@/components/LoadChar'
+import SaveChar from '@/components/SaveChar'
 import { CharContext } from '@/providers/CharProvider'
 import React, { FC } from 'react'
 

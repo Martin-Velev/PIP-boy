@@ -1,5 +1,5 @@
 import { NAV_HEIGHT } from '@/app/constants'
-import Nav from '@/components/common/Nav'
+import Nav from '@/components/Nav'
 import { FC } from 'react'
 
 const StatNav: FC = () => {

@@ -1,5 +1,4 @@
 'use client'
-
 import { CharContext } from '@/providers/CharProvider'
 import React, { FC } from 'react'
 

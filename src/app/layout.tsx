@@ -1,10 +1,10 @@
-import CharManager from '@/components/common/CharManager'
-import Header from '@/components/common/Header'
 import RootNav from '@/app/rootNav'
 import { CharProvider } from '@/providers/CharProvider'
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Header from '@/components/Header'
+import CharManager from '@/components/CharManager'
 
 const inter = Inter({ subsets: ['latin'] })
 
