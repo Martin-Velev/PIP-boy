@@ -1,11 +1,8 @@
-import React, { FC } from 'react'
+import { redirect } from 'next/navigation'
+import { FC } from 'react'
 
 const Page: FC = () => {
-	return (
-		<div>
-			<h1>Level Up</h1>
-		</div>
-	)
+	redirect('/levelUp/confirm')
 }
 
 export default Page

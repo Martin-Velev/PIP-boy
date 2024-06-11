@@ -1,7 +1,5 @@
+import { FTR } from '@/types/perk'
 import { Char } from '../types/char'
-import { FTR } from '../types/traits'
-import { MAX_STAT, MIN_STAT } from './defaults'
-import { FRAME_HIT_DIE_MAP } from './frames'
 import { getStatMod } from './stats'
 
 export const INT_TO_SKILL_GAIN = {
@@ -26,24 +24,8 @@ export function levelUp(char: Char, hpGain: number = 0): Char {
 	const int = newChar.stats.intelligence as keyof typeof INT_TO_SKILL_GAIN
 	newChar.availableSkillPoints += INT_TO_SKILL_GAIN[int]
 
-	// ADD HP
-	// Get the frame of the character
-	const frame = newChar.frame as keyof typeof FRAME_HIT_DIE_MAP
-	const hitDie = FRAME_HIT_DIE_MAP[frame]
-	if (!hpGain) {
-		const roll = Math.floor(Math.random() * hitDie) + 1
-		hpGain = roll
-	}
 	const perks = char.perks.map((perk) => perk.name)
 	const hasFTR = perks.includes(FTR)
-
-	const end = newChar.stats.endurance
-	const endMod = getStatMod(end)
-	hpGain += endMod
-	if (hasFTR) {
-		hpGain = Math.floor(hpGain / 2)
-	}
-	newChar.hp += hpGain
 
 	// ADD AVAILABLE PERKS EVERY EVEN LEVEL
 	// Fear the reaper grants you a perk every level instead of on even levels

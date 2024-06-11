@@ -5,6 +5,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import CharManager from '@/components/CharManager'
+import Link from 'next/link'
+import LevelUpButton from '@/components/LevelUpButton'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -36,6 +38,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
 						<div className='absolute bottom-10 left-0'>
 							<CharManager />
+						</div>
+
+						<div className='absolute bottom-10 right-0 text-2xl flex flex-col'>
+							<LevelUpButton />
 						</div>
 					</CharProvider>
 				</div>
