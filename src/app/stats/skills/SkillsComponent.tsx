@@ -53,10 +53,10 @@ const SkillsComponent: FC<StatsComponentProps> = ({ char, setChar }) => {
 		skills[skill] = skills[skill] + increment
 		setChar({ ...char, skills, availableSkillPoints: char.availableSkillPoints - increment })
 	}
-	const skillList = skills.map((skill: Skill) => {
+	const skillList = skills.map((skill: Skill, i) => {
 		console.log('tagged', char.taggedSkills)
 		return (
-			<li key={`skill-${skill}`} className='flex flex-row hover:border p-1'>
+			<li key={`${i}-skill-${skill}`} className='flex flex-row hover:border p-1'>
 				<div className='w-1/12'>{char.taggedSkills.includes(skill) ? '□' : ''}</div>
 
 				<div onClick={(e) => tagSkill(skill)} className='w-1/2 cursor-pointer'>

@@ -2,7 +2,7 @@ Name,Ranks,Level,Requirments,Description
 Fear the Reaper:,1,2,Life giver not taken,"Every time you gain a level, you gain half you hit die less maximum hit points (minimum 2). You can take an additional perk this level and every other level after. You cannot take the Life Giver."
 Life Giver,1,2,EN 6,"Your hit point maximum increases by an amount equal to twice your level when you gain this feat. Whenever you gain a level thereafter, your hit point maximum increases by an additional 2 hit pointsCannot be taken in conjunction with Fear the Reaper"
 Bounty Hunter,4,2,,"Pick one enemy type Beasts, Humans, robots, Mutants You can reroll dmg once against them when rolling damage."
-Survival Expert:,1,2,Surv 30,You have advantage on Survival checks.
+Survival Expert:,1,2,Survival 30,You have advantage on Survival checks.
 Scoundrel,1,2,Barter 30,You have advantage on Persuasion checks against humanoids that would not be attracted to you.
 Merchant Prince,1,2,Ch 6,You have advantage on Persuasion checks to sell items for more caps and to buy items for fewer caps
 Tunnel Runner,1,2,AG 8,"You can take the dash, hide, help action as a bonus action"

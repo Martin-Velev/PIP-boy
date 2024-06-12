@@ -1,14 +1,13 @@
 'use client'
-import { levelSorter } from '@/rules/perks'
+import { hasRequirments, levelSorter, sortPerksByRequirements } from '@/rules/perks'
 import { Perk } from '@/types/perk'
 import { CharProps } from '@/types/props'
 import { FC, useState, useEffect } from 'react'
 import PERKS_JSON from '@data/perks.json'
+import PerkComponent from '@/app/stats/perks/PerkComponent'
 
 const PerksComponent: FC<CharProps> = ({ char, setChar }) => {
-	// const [perks, setPerks] = useState([])
-	const perks = PERKS_JSON as Perk[]
-	// const [selectedPerks, setSelectedPerks] = useState([] as Perk[])
+	const perks = sortPerksByRequirements(PERKS_JSON as Perk[], char)
 	const [highlightedPerk, setHighlightedPerk] = useState(null as Perk | null)
 
 	// Fetch perks from the server
@@ -20,7 +19,8 @@ const PerksComponent: FC<CharProps> = ({ char, setChar }) => {
 	function togglePerk(perk: Perk) {
 		const index = char.perks.indexOf(perk)
 		const isSelected = index > -1
-
+		const meetsRequirments = hasRequirments(char, perk)
+		if (!meetsRequirments) return
 		const newPerks = [...char.perks]
 		let perksLeft = char.availablePerks
 		if (isSelected) {
@@ -35,9 +35,20 @@ const PerksComponent: FC<CharProps> = ({ char, setChar }) => {
 		setChar({ ...char, perks: newPerks, availablePerks: perksLeft })
 	}
 
-	function highlightPerk(perk: Perk) {
-		setHighlightedPerk(perk)
-	}
+	const perkList = perks.map((perk: Perk, i) => {
+		const charPerks = char.perks.map((p) => p.name)
+		return (
+			<li className='hover:border p-1 flex flex-row' onClick={() => setHighlightedPerk(perk)}>
+				<PerkComponent
+					key={`${i}-${perk.name}`}
+					perk={perk}
+					onCheck={togglePerk}
+					checked={charPerks.includes(perk.name)}
+					available={hasRequirments(char, perk)}
+				/>
+			</li>
+		)
+	})
 
 	return (
 		<div id='perks' className='flex flex-col max-h-screen'>
@@ -45,30 +56,7 @@ const PerksComponent: FC<CharProps> = ({ char, setChar }) => {
 			<div className='w-full flex flex-row'>
 				<div className='w-1/2'>
 					<ul className='overflow-scroll' style={{ maxHeight: '70vh' }}>
-						{perks.sort(levelSorter).map((perk: Perk) => (
-							<li
-								key={perk.name}
-								className='hover:border p-1 flex flex-row'
-								onClick={() => highlightPerk(perk)}
-							>
-								<input
-									disabled={perk.level > char.level}
-									style={{ all: 'revert' }}
-									type='checkbox'
-									checked={char.perks.indexOf(perk) > -1}
-									onChange={() => togglePerk(perk)}
-								/>
-								<div className='w-full flex flex-row'>
-									<div>{perk.name}</div>
-									<div className='mx-2'>|</div>
-									<div>Level: {perk.level}</div>
-									<div className='mx-2'>|</div>
-									<div>Ranks: {perk.ranks}</div>
-									<div className='mx-2'>|</div>
-									<div className='mr-0'>{perk.requrments}</div>
-								</div>
-							</li>
-						))}
+						{perkList}
 					</ul>
 				</div>
 

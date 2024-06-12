@@ -60,8 +60,8 @@ const TraitsComponent: FC<CharProps> = ({ char, setChar }) => {
 			</div>
 
 			<ul className='overflow-scroll' style={{ maxHeight: '70vh' }}>
-				{traits.map((trait: Trait) => (
-					<li key={trait.name} className='flex flex-row my-8'>
+				{traits.map((trait: Trait, i) => (
+					<li key={`${i}-${trait.name}`} className='flex flex-row my-8'>
 						<input
 							style={{ all: 'revert' }}
 							type='checkbox'

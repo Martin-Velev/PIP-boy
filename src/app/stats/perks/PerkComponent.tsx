@@ -2,18 +2,31 @@ import { Perk } from '@/types/perk'
 
 interface PerkComponentProps {
 	perk: Perk
-	isSelected: boolean
-	onSelect: (perk: Perk) => void
+	onCheck: (perk: Perk) => void
+	checked: boolean
+	available: boolean
 }
 
-const PerkComponent: React.FC<PerkComponentProps> = ({ perk, isSelected, onSelect }) => {
+const PerkComponent: React.FC<PerkComponentProps> = ({ perk, onCheck, checked, available }) => {
 	return (
-		<div className='flex flex-row w-full' onClick={e => onSelect(perk)}>
-			<div className='w-1/12'>{isSelected ? '□' : ''}</div>
-			<h3>{perk.name}</h3>
-			<p>{perk.description}</p>
-			{/* Render other perk details */}
-		</div>
+		<>
+			<input
+				disabled={!available}
+				style={{ all: 'revert' }}
+				type='checkbox'
+				checked={checked}
+				onChange={() => onCheck(perk)}
+			/>
+			<div className='w-full flex flex-row'>
+				<div>{perk.name}</div>
+				<div className='mx-2'>|</div>
+				<div>Level: {perk.level}</div>
+				<div className='mx-2'>|</div>
+				<div>Ranks: {perk.ranks}</div>
+				<div className='mx-2'>|</div>
+				<div className='mr-0'>{perk.requrments}</div>
+			</div>
+		</>
 	)
 }
 
