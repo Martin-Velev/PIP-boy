@@ -19,7 +19,6 @@ const PerksComponent: FC<CharProps> = ({ char, setChar }) => {
 				const data = await response.json()
 
 				setPerks(data.perks)
-				console.log('Perks:', data.perks)
 			} catch (error) {
 				console.error('Error fetching data:', error)
 			}
@@ -41,7 +40,6 @@ const PerksComponent: FC<CharProps> = ({ char, setChar }) => {
 		}
 
 		setSelectedPerks([...newSelected])
-		console.log('Selected perks:', selectedPerks)
 	}
 
 	function highlightPerk(perk: Perk) {
