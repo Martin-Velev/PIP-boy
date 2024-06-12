@@ -41,20 +41,3 @@ export function hasRequirments(char: Char, perk: Perk): boolean {
 }
 
 export const levelSorter = (a: Perk, b: Perk) => a.level - b.level
-
-export function sortPerksByRequirements(perks: Perk[], char: Char): Perk[] {
-	const metRequirements: Perk[] = []
-	const unmetRequirements: Perk[] = []
-
-	for (const perk of perks) {
-		if (hasRequirments(char, perk)) {
-			metRequirements.push(perk)
-		} else {
-			unmetRequirements.push(perk)
-		}
-	}
-
-	return [...metRequirements.sort(levelSorter), ...unmetRequirements.sort(levelSorter)]
-}
-
-

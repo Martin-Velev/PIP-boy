@@ -1,5 +1,5 @@
 'use client'
-import { hasRequirments, levelSorter, sortPerksByRequirements } from '@/rules/perks'
+import { hasRequirments, levelSorter } from '@/rules/perks'
 import { Perk } from '@/types/perk'
 import { CharProps } from '@/types/props'
 import { FC, useState, useEffect } from 'react'
@@ -7,7 +7,7 @@ import PERKS_JSON from '@data/perks.json'
 import PerkComponent from '@/app/stats/perks/PerkComponent'
 
 const PerksComponent: FC<CharProps> = ({ char, setChar }) => {
-	const perks = sortPerksByRequirements(PERKS_JSON as Perk[], char)
+	const perks = PERKS_JSON as Perk[]
 	const [highlightedPerk, setHighlightedPerk] = useState(null as Perk | null)
 
 	// Fetch perks from the server
@@ -35,7 +35,7 @@ const PerksComponent: FC<CharProps> = ({ char, setChar }) => {
 		setChar({ ...char, perks: newPerks, availablePerks: perksLeft })
 	}
 
-	const perkList = perks.map((perk: Perk, i) => {
+	const perkMapper = (perk: Perk, i: number, available: boolean) => {
 		const charPerks = char.perks.map((p) => p.name)
 		return (
 			<li className='hover:border p-1 flex flex-row' onClick={() => setHighlightedPerk(perk)}>
@@ -44,11 +44,19 @@ const PerksComponent: FC<CharProps> = ({ char, setChar }) => {
 					perk={perk}
 					onCheck={togglePerk}
 					checked={charPerks.includes(perk.name)}
-					available={hasRequirments(char, perk)}
+					available={available}
 				/>
 			</li>
 		)
-	})
+	}
+
+	const availablePerks = perks.filter((perk) => hasRequirments(char, perk)).sort(levelSorter)
+	const lockedPerks = perks.filter((perk) => !hasRequirments(char, perk)).sort(levelSorter)
+
+	const perkList = [
+		...availablePerks.map((perk, i) => perkMapper(perk, i, true)),
+		...lockedPerks.map((perk, i) => perkMapper(perk, i, false)),
+	]
 
 	return (
 		<div id='perks' className='flex flex-col max-h-screen'>
