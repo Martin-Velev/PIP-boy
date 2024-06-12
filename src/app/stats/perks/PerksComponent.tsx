@@ -1,45 +1,38 @@
 'use client'
-
+import { levelSorter } from '@/rules/perks'
 import { Perk } from '@/types/perk'
 import { CharProps } from '@/types/props'
 import { FC, useState, useEffect } from 'react'
-
-const levelSorter = (a: Perk, b: Perk) => a.level - b.level
+import PERKS_JSON from '@data/perks.json'
 
 const PerksComponent: FC<CharProps> = ({ char, setChar }) => {
-	const [perks, setPerks] = useState([])
-	const [selectedPerks, setSelectedPerks] = useState([] as Perk[])
+	// const [perks, setPerks] = useState([])
+	const perks = PERKS_JSON as Perk[]
+	// const [selectedPerks, setSelectedPerks] = useState([] as Perk[])
 	const [highlightedPerk, setHighlightedPerk] = useState(null as Perk | null)
 
 	// Fetch perks from the server
 	useEffect(() => {
-		const fetchData = async () => {
-			try {
-				const response = await fetch('/api/perks/json')
-				const data = await response.json()
-
-				setPerks(data.perks)
-			} catch (error) {
-				console.error('Error fetching data:', error)
-			}
-		}
-
+		const fetchData = async () => {}
 		fetchData()
 	}, [])
 
 	function togglePerk(perk: Perk) {
-		const index = selectedPerks.indexOf(perk)
+		const index = char.perks.indexOf(perk)
 		const isSelected = index > -1
 
-		const newSelected = [...selectedPerks]
-
+		const newPerks = [...char.perks]
+		let perksLeft = char.availablePerks
 		if (isSelected) {
-			newSelected.splice(index, 1)
+			newPerks.splice(index, 1)
+			perksLeft++
 		} else {
-			newSelected.push(perk)
+			if (perksLeft <= 0) return
+			newPerks.push(perk)
+			perksLeft--
 		}
 
-		setSelectedPerks([...newSelected])
+		setChar({ ...char, perks: newPerks, availablePerks: perksLeft })
 	}
 
 	function highlightPerk(perk: Perk) {
@@ -52,7 +45,7 @@ const PerksComponent: FC<CharProps> = ({ char, setChar }) => {
 			<div className='w-full flex flex-row'>
 				<div className='w-1/2'>
 					<ul className='overflow-scroll' style={{ maxHeight: '70vh' }}>
-						{perks.sort(levelSorter).map((perk: any) => (
+						{perks.sort(levelSorter).map((perk: Perk) => (
 							<li
 								key={perk.name}
 								className='hover:border p-1 flex flex-row'
@@ -62,7 +55,7 @@ const PerksComponent: FC<CharProps> = ({ char, setChar }) => {
 									disabled={perk.level > char.level}
 									style={{ all: 'revert' }}
 									type='checkbox'
-									checked={selectedPerks.indexOf(perk) > -1}
+									checked={char.perks.indexOf(perk) > -1}
 									onChange={() => togglePerk(perk)}
 								/>
 								<div className='w-full flex flex-row'>
@@ -70,14 +63,10 @@ const PerksComponent: FC<CharProps> = ({ char, setChar }) => {
 									<div className='mx-2'>|</div>
 									<div>Level: {perk.level}</div>
 									<div className='mx-2'>|</div>
+									<div>Ranks: {perk.ranks}</div>
+									<div className='mx-2'>|</div>
 									<div className='mr-0'>{perk.requrments}</div>
 								</div>
-
-								{/* <PerkComponent
-							perk={perk}
-							isSelected={selectedPerks.indexOf(perk) > -1}
-							onSelect={togglePerk}
-						/> */}
 							</li>
 						))}
 					</ul>

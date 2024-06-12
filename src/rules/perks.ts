@@ -6,3 +6,6 @@ export function hasRequirments(char: Char, perk: Perk) {
 
     
 }
+
+
+export const levelSorter = (a: Perk, b: Perk) => a.level - b.level

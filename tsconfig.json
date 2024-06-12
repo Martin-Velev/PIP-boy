@@ -23,7 +23,8 @@
       "@components/*": ["./src/components/*"],
       "@files/*": ["./src/files/*"],
       "@public/*": ["./public/*"],
-      "@root/*": ["."]
+      "@root/*": ["."],
+      "@data/*": ["./data/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "/public", "scripts/perkConverter.js"],

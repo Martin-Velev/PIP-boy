@@ -19,7 +19,11 @@ function convert(csv) {
 		const currentLine = lines[i].split(',')
 
 		for (let j = 0; j < headers.length; j++) {
-			obj[headers[j]] = currentLine[j].replace(/"/g, "").replace(/\r/g, "").replace(/\n/g, "").replace(/:/g, "")
+			let value = currentLine[j].replace(/"/g, "").replace(/\r/g, "").replace(/\n/g, "").replace(/:/g, "")
+			if (headers[j] === 'ranks' || headers[j] === 'level') {
+				value = parseInt(value)
+			}
+			obj[headers[j]] = value
 		}
 
 		result.push(obj)
