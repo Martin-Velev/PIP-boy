@@ -73,7 +73,8 @@ export const DEFAULT_TAGS = 3
 export const DEFAULT_HUMAN: Char = {
 	name: '',
 	level: 0,
-	hp: 0,
+	hp: 5,
+	maxHP: 5,
 	frame: 'AVERAGE_JOE',
 
 	stats: DEFAULT_STATS,

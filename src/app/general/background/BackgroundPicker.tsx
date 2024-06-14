@@ -32,7 +32,7 @@ const BackgroundPicker: FC<CharProps> = ({ char, setChar }) => {
 				</ul>
 			</div>
 
-			<div className='w-1/2 overflow-scroll' style={{ maxHeight: '80vh' }}>
+			<div className='w-1/2 overflow-scroll ' style={{ maxHeight: '70vh' }}>
 				<h3>Description</h3>
 
 				<div>

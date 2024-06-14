@@ -10,6 +10,7 @@ export type Char = {
 	name: string
 	level: number
 	hp: number
+	maxHP: number
 
 	race: Race
 	frame: Frame

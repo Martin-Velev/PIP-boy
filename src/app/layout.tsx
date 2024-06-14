@@ -7,6 +7,7 @@ import Header from '@/components/Header'
 import CharManager from '@/components/CharManager'
 import Link from 'next/link'
 import LevelUpButton from '@/components/LevelUpButton'
+import HPTracker from '@/components/HPTracker'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,9 +31,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 				<link rel='icon' href='/vault-tec.svg' sizes='96x96' />
 			</head>
 			<body className={inter.className + 'h-full w-full'}>
-				<div id='app-container' className='h-screen'>
+				<div id='app-container' className='h-screen pt-20'>
 					<CharProvider>
-						<Header />
+						<div className='absolute top-0 right-0 text-2xl flex flex-col'>
+							<HPTracker />
+						</div>
+						<div className='absolute top-0 text-2xl flex flex-col'>
+							<Header />
+						</div>
 						{children}
 						<RootNav />
 
