@@ -77,10 +77,9 @@ const SkillsComponent: FC<StatsComponentProps> = ({ char, setChar }) => {
 		<>
 			<div
 				id='skills'
-				className='overflow-scroll w-full items-center flex flex-col justify-center justify-between text-2xl columns-1'
+				className='p-0 m-0 overflow-scroll w-full items-center flex flex-col justify-center justify-between text-2xl columns-1'
 				style={{
-					maxHeight: '70vh',
-
+					maxHeight: '85vh',
 				}}
 			>
 				<div className='flex flex-row w-full px-10 pt-10 justify-center text-center '>

@@ -59,7 +59,7 @@ const TraitsComponent: FC<CharProps> = ({ char, setChar }) => {
 				<h4 className='text-4xl'>(select 2)</h4>
 			</div>
 
-			<ul className='overflow-scroll' style={{ maxHeight: '50vh' }}>
+			<ul className='overflow-scroll' style={{ maxHeight: '60vh' }}>
 				{traits.map((trait: Trait, i) => (
 					<li key={`${i}-${trait.name}`} className='flex flex-row my-8'>
 						<input

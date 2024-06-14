@@ -1,6 +1,6 @@
 'use client'
 import { hasRequirments, levelSorter } from '@/rules/perks'
-import { Perk } from '@/types/perk'
+import { FTR, Perk } from '@/types/perk'
 import { CharProps } from '@/types/props'
 import { FC, useState, useEffect } from 'react'
 import PERKS_JSON from '@data/perks.json'
@@ -23,12 +23,17 @@ const PerksComponent: FC<CharProps> = ({ char, setChar }) => {
 		if (!meetsRequirments) return
 		const newPerks = [...char.perks]
 		let perksLeft = char.availablePerks
+
 		if (isSelected) {
+			// Can't remove FTR
+			if (perk.name === FTR) return
 			newPerks.splice(index, 1)
 			perksLeft++
 		} else {
 			if (perksLeft <= 0) return
 			newPerks.push(perk)
+			// Add another perk if you select FTR
+			if (perk.name === FTR) perksLeft++
 			perksLeft--
 		}
 
